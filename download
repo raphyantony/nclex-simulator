@@ -1,0 +1,8 @@
+# Copy this file to .env and fill in your values
+# NEVER commit your actual .env file to GitHub
+
+# Get your API key from https://console.anthropic.com/
+ANTHROPIC_API_KEY=sk-ant-your-key-here
+
+# Port (Render sets this automatically - do not change)
+PORT=3000
