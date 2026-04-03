@@ -3,6 +3,9 @@ const questions = [
     "id": 1,
     "type": "multiple-choice",
     ...
+    \
+    "type": "multiple-choice",
+    ...
     {
 
     "id": 1,
