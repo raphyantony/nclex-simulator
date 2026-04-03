@@ -1,34 +1,1380 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NCLEX Simulator</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 40px; background: #f4f6f8; }
-        .container { background: white; padding: 20px; border-radius: 8px; max-width: 600px; margin: 0 auto; box-shadow: 0px 4px 6px rgba(0,0,0,0.1); }
-        h1 { color: #2c3e50; }
-        .btn { background: #3498db; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NCLEX-RN Simulator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['DM Serif Display', 'serif'],
+            body: ['DM Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            navy: { 900: '#0a0f1e', 800: '#0f1730', 700: '#162040', 600: '#1e2d52' },
+            teal: { 400: '#2dd4bf', 500: '#14b8a6', 600: '#0d9488' },
+            amber: { 400: '#fbbf24', 500: '#f59e0b' },
+            rose: { 400: '#fb7185', 500: '#f43f5e' },
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #0a0f1e;
+      color: #e2e8f0;
+      min-height: 100vh;
+    }
+
+    /* Animated background */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 20% 20%, rgba(13,148,136,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 80% 80%, rgba(30,45,82,0.4) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .content-layer { position: relative; z-index: 1; }
+
+    /* Option cards */
+    .option-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 14px 18px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .option-card:hover:not(.locked) {
+      background: rgba(45,212,191,0.08);
+      border-color: rgba(45,212,191,0.3);
+      transform: translateX(3px);
+    }
+    .option-card.selected {
+      background: rgba(45,212,191,0.12);
+      border-color: rgba(45,212,191,0.5);
+    }
+    .option-card.correct {
+      background: rgba(16,185,129,0.15);
+      border-color: rgba(16,185,129,0.6);
+    }
+    .option-card.incorrect {
+      background: rgba(244,63,94,0.12);
+      border-color: rgba(244,63,94,0.5);
+    }
+    .option-card.locked { cursor: default; }
+
+    /* Bowtie grid */
+    .bowtie-col {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .bowtie-option {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 10px 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 0.875rem;
+      line-height: 1.4;
+    }
+    .bowtie-option:hover:not(.locked) {
+      background: rgba(45,212,191,0.1);
+      border-color: rgba(45,212,191,0.35);
+    }
+    .bowtie-option.selected {
+      background: rgba(45,212,191,0.15);
+      border-color: rgba(45,212,191,0.55);
+    }
+    .bowtie-option.correct {
+      background: rgba(16,185,129,0.18);
+      border-color: rgba(16,185,129,0.6);
+    }
+    .bowtie-option.incorrect {
+      background: rgba(244,63,94,0.12);
+      border-color: rgba(244,63,94,0.5);
+    }
+
+    /* ── Highlight question type ─────────────────────────────────────────── */
+    .highlight-passage {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 20px 24px;
+      line-height: 2;
+      font-size: 0.95rem;
+      color: #cbd5e1;
+      margin-bottom: 12px;
+    }
+    .highlight-segment {
+      display: inline;
+      border-radius: 4px;
+      padding: 2px 0;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+      border-bottom: 2px solid transparent;
+    }
+    .highlight-segment:hover:not(.locked) {
+      background: rgba(45,212,191,0.15);
+      border-bottom-color: rgba(45,212,191,0.5);
+      color: #e2e8f0;
+    }
+    .highlight-segment.selected {
+      background: rgba(45,212,191,0.2);
+      border-bottom-color: #2dd4bf;
+      color: #ffffff;
+    }
+    .highlight-segment.correct {
+      background: rgba(16,185,129,0.2);
+      border-bottom-color: #10b981;
+      color: #ffffff;
+    }
+    .highlight-segment.incorrect {
+      background: rgba(244,63,94,0.15);
+      border-bottom-color: #f43f5e;
+      color: #fca5a5;
+      text-decoration: line-through;
+      text-decoration-color: rgba(244,63,94,0.5);
+    }
+    .highlight-segment.locked { cursor: default; }
+    .highlight-note {
+      font-size: 0.8rem;
+      color: #64748b;
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    /* ── Matrix question type ────────────────────────────────────────────── */
+    .matrix-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .matrix-table th {
+      background: rgba(45,212,191,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding: 12px 16px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #94a3b8;
+      text-align: center;
+    }
+    .matrix-table th:first-child { text-align: left; }
+    .matrix-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      vertical-align: middle;
+      font-size: 0.875rem;
+      color: #cbd5e1;
+      background: rgba(255,255,255,0.02);
+    }
+    .matrix-table tr:last-child td { border-bottom: none; }
+    .matrix-table tr:hover:not(.locked-row) td { background: rgba(255,255,255,0.04); }
+    .matrix-radio {
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.2);
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.15s;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto;
+      flex-shrink: 0;
+    }
+    .matrix-radio:hover:not(.locked) {
+      border-color: rgba(45,212,191,0.6);
+      background: rgba(45,212,191,0.1);
+    }
+    .matrix-radio.selected {
+      border-color: #2dd4bf;
+      background: rgba(45,212,191,0.2);
+    }
+    .matrix-radio.selected::after {
+      content: '';
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #2dd4bf;
+    }
+    .matrix-radio.correct {
+      border-color: #10b981;
+      background: rgba(16,185,129,0.2);
+    }
+    .matrix-radio.correct::after {
+      content: '✓';
+      font-size: 11px;
+      color: #10b981;
+      font-weight: 700;
+    }
+    .matrix-radio.incorrect {
+      border-color: #f43f5e;
+      background: rgba(244,63,94,0.15);
+    }
+    .matrix-radio.incorrect::after {
+      content: '✗';
+      font-size: 11px;
+      color: #f43f5e;
+      font-weight: 700;
+    }
+    .matrix-radio.locked { cursor: default; }
+    .matrix-row-correct td { background: rgba(16,185,129,0.06) !important; }
+    .matrix-row-incorrect td { background: rgba(244,63,94,0.05) !important; }
+
+    /* Timer */
+    .timer-pill {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 999px;
+      padding: 6px 16px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.9rem;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.2s;
+    }
+    .timer-pill:hover { background: rgba(255,255,255,0.1); }
+    .timer-pill.warning { border-color: rgba(251,191,36,0.5); color: #fbbf24; }
+    .timer-pill.danger { border-color: rgba(244,63,94,0.5); color: #fb7185; animation: pulse 1s infinite; }
+    .timer-pill.hidden-timer { opacity: 0.4; }
+
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.6; } }
+
+    /* Progress bar */
+    .progress-bar {
+      height: 3px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #0d9488, #2dd4bf);
+      border-radius: 999px;
+      transition: width 0.5s ease;
+    }
+
+    /* Rationale box */
+    .rationale-box {
+      background: rgba(45,212,191,0.05);
+      border: 1px solid rgba(45,212,191,0.2);
+      border-left: 4px solid #2dd4bf;
+      border-radius: 0 12px 12px 0;
+      padding: 20px;
+      margin-top: 20px;
+      animation: fadeSlideIn 0.4s ease;
+    }
+    @keyframes fadeSlideIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Modals */
+    .modal-backdrop {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .modal-card {
+      background: linear-gradient(145deg, #0f1730, #162040);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 48px 40px;
+      max-width: 600px;
+      width: 90%;
+      animation: modalIn 0.4s cubic-bezier(0.34,1.56,0.64,1);
+    }
+    @keyframes modalIn {
+      from { opacity: 0; transform: scale(0.9) translateY(20px); }
+      to   { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    /* Analysis modal content */
+    .analysis-content { font-size: 0.9rem; line-height: 1.7; }
+    .analysis-content strong, .analysis-content b { color: #2dd4bf; }
+
+    /* Buttons */
+    .btn-primary {
+      background: linear-gradient(135deg, #0d9488, #2dd4bf);
+      color: #0a0f1e;
+      font-weight: 600;
+      padding: 12px 32px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+    }
+    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(13,148,136,0.3); }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.07);
+      color: #e2e8f0;
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 11px 28px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.12); }
+
+    /* Score card */
+    .score-ring {
+      width: 140px; height: 140px;
+      border-radius: 50%;
+      background: conic-gradient(#14b8a6 var(--pct), rgba(255,255,255,0.08) 0);
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+    }
+    .score-ring::before {
+      content: '';
+      position: absolute;
+      inset: 10px;
+      background: #0f1730;
+      border-radius: 50%;
+    }
+    .score-ring span { position: relative; z-index: 1; font-family: 'DM Serif Display'; font-size: 2rem; }
+
+    /* Category badges */
+    .category-badge {
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: rgba(45,212,191,0.12);
+      border: 1px solid rgba(45,212,191,0.25);
+      color: #2dd4bf;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    /* Splash screen */
+    #splash { animation: fadeIn 0.6s ease; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    .checkpoint-badge {
+      background: linear-gradient(135deg, rgba(251,191,36,0.15), rgba(251,191,36,0.05));
+      border: 1px solid rgba(251,191,36,0.3);
+      border-radius: 12px;
+      padding: 4px 12px;
+      font-size: 0.75rem;
+      color: #fbbf24;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>NCLEX Clinical Judgment Simulator</h1>
-        <p>Welcome to your simulation practice!</p>
-        <div id="quiz-area">Loading questions...</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- SPLASH SCREEN                                                              -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<div id="splash" class="content-layer min-h-screen flex items-center justify-center p-6">
+  <div class="max-w-xl w-full text-center">
+    <div class="mb-6 inline-flex items-center gap-2 text-teal-400 text-sm font-mono tracking-widest uppercase opacity-70">
+      <span>◈</span> NCLEX-RN Preparation <span>◈</span>
+    </div>
+    <h1 class="font-display text-5xl md:text-6xl text-white mb-4 leading-tight">
+      Clinical Judgment<br/><em class="text-teal-400">Simulator</em>
+    </h1>
+    <p class="text-slate-400 text-lg mb-10 max-w-sm mx-auto leading-relaxed">
+      Adaptive exam simulation with AI-powered performance analytics.
+    </p>
+
+    <div class="grid grid-cols-3 gap-4 mb-10 text-left">
+      <div class="bowtie-col">
+        <div class="text-2xl font-display text-white mb-1">150</div>
+        <div class="text-xs text-slate-500">Questions</div>
+      </div>
+      <div class="bowtie-col">
+        <div class="text-2xl font-display text-white mb-1">5 hrs</div>
+        <div class="text-xs text-slate-500">Time limit</div>
+      </div>
+      <div class="bowtie-col">
+        <div class="text-2xl font-display text-white mb-1">3 AI</div>
+        <div class="text-xs text-slate-500">Checkpoints</div>
+      </div>
     </div>
 
-    <script src="questions.js"></script>
-    <script>
-        // Simple script to test if the questions loaded
-        window.onload = function() {
-            const quizArea = document.getElementById('quiz-area');
-            if (typeof questions !== 'undefined' && questions.length > 0) {
-                quizArea.innerHTML = `<p><strong>Success!</strong> Loaded ${questions.length} questions. Ready to begin.</p> <button class="btn">Start Exam</button>`;
-            } else {
-                quizArea.innerHTML = "Error: Could not load questions. Check your questions.js file!";
-            }
+    <div class="text-left mb-8 space-y-2">
+      <div class="flex items-center gap-3 text-sm text-slate-400">
+        <span class="text-teal-400">✓</span> MC, SATA, Bow-Tie, Highlight & Matrix NGN formats
+      </div>
+      <div class="flex items-center gap-3 text-sm text-slate-400">
+        <span class="text-teal-400">✓</span> Immediate rationale after each question
+      </div>
+      <div class="flex items-center gap-3 text-sm text-slate-400">
+        <span class="text-teal-400">✓</span> AI coaching at questions 50, 100 & 150
+      </div>
+      <div class="flex items-center gap-3 text-sm text-slate-400">
+        <span class="text-teal-400">✓</span> Psychological check-in at question 85
+      </div>
+    </div>
+
+    <button class="btn-primary w-full py-4 text-lg" onclick="startExam()">
+      Begin Simulation →
+    </button>
+    <p class="text-xs text-slate-600 mt-4">Once started, the 5-hour timer begins and cannot be paused.</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- EXAM INTERFACE                                                             -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<div id="exam" class="content-layer hidden min-h-screen flex flex-col">
+
+  <!-- Top Bar -->
+  <div class="border-b border-white/5 bg-navy-900/80 backdrop-blur-sm sticky top-0 z-10">
+    <div class="max-w-4xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
+      <!-- Left: Question counter -->
+      <div class="flex items-center gap-3">
+        <span class="text-white font-display text-xl">Q<span id="qNum">1</span></span>
+        <span class="text-slate-600">/</span>
+        <span class="text-slate-500 text-sm" id="totalQCount">150</span>
+        <div id="qTypeBadge" class="category-badge ml-2">MC</div>
+      </div>
+
+      <!-- Center: Progress bar -->
+      <div class="flex-1 max-w-xs hidden md:block">
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill" style="width:0%"></div>
+        </div>
+        <div class="text-center text-xs text-slate-600 mt-1">
+          <span id="scoreDisplay">0</span> correct
+        </div>
+      </div>
+
+      <!-- Right: Timer -->
+      <div id="timerPill" class="timer-pill" onclick="toggleTimer()" title="Click to hide/show time">
+        <span id="timerDisplay">5:00:00</span>
+        <span id="timerEye" class="ml-2 text-xs opacity-50">👁</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Question Area -->
+  <div class="flex-1 max-w-4xl mx-auto w-full px-6 py-8">
+
+    <!-- Category + Difficulty -->
+    <div class="flex items-center gap-3 mb-5">
+      <span id="catBadge" class="category-badge">Pharmacology</span>
+      <span id="diffBadge" class="text-xs text-slate-600 uppercase tracking-wider">Medium</span>
+      <span id="checkpointBadge" class="checkpoint-badge hidden">⚡ AI Checkpoint Ahead</span>
+    </div>
+
+    <!-- Stem -->
+    <div class="mb-6">
+      <p id="questionStem" class="text-white text-lg leading-relaxed font-body"></p>
+    </div>
+
+    <!-- Options container — rendered dynamically -->
+    <div id="optionsContainer"></div>
+
+    <!-- Action row -->
+    <div class="flex items-center justify-between mt-8 flex-wrap gap-4">
+      <div id="pointsBadge" class="text-sm text-slate-500"></div>
+      <button id="submitBtn" class="btn-primary" onclick="submitAnswer()" disabled>
+        Submit Answer
+      </button>
+    </div>
+
+    <!-- Rationale (shown after submit) -->
+    <div id="rationaleBox" class="rationale-box hidden">
+      <div class="flex items-center gap-2 mb-3">
+        <span id="resultIcon" class="text-2xl"></span>
+        <span id="resultLabel" class="font-semibold text-lg"></span>
+        <span id="pointsEarned" class="ml-auto text-sm text-slate-400"></span>
+      </div>
+      <p id="rationaleText" class="text-slate-300 text-sm leading-relaxed"></p>
+    </div>
+
+    <!-- Next button (shown after submit) -->
+    <div class="flex justify-end mt-6">
+      <button id="nextBtn" class="btn-primary hidden" onclick="nextQuestion()">
+        Next Question →
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- MODAL: PSYCHOLOGICAL INTERVENTION (after Q85)                             -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<div id="psych85Modal" class="modal-backdrop hidden">
+  <div class="modal-card text-center max-w-lg">
+    <div class="text-5xl mb-5">🧠</div>
+    <h2 class="font-display text-3xl text-white mb-4">Pause.<br/>You are <em class="text-teal-400">halfway there.</em></h2>
+    <p class="text-slate-400 leading-relaxed mb-4">
+      You have just completed <strong class="text-white">85 questions</strong>. This is a deliberate stop.
+    </p>
+    <p class="text-slate-400 leading-relaxed mb-4">
+      Research on high-stakes examinations shows that <strong class="text-white">anxiety peaks between questions 75–95</strong>.
+      Your brain is tired, but it is not failing you.
+    </p>
+    <p class="text-slate-400 leading-relaxed mb-8">
+      Take 60 seconds. Breathe deeply. Remind yourself: <em class="text-teal-300">"I have prepared for this. I trust my clinical reasoning."</em>
+      The next question is no different from the first.
+    </p>
+    <div class="flex items-center justify-center gap-3 mb-6">
+      <div id="psych85Score" class="text-3xl font-display text-white"></div>
+      <div class="text-slate-500 text-sm text-left">correct answers<br/>so far</div>
+    </div>
+    <button class="btn-primary w-full" onclick="closePsych85()">I'm ready. Continue →</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- MODAL: AI ANALYSIS CHECKPOINT                                             -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<div id="analysisModal" class="modal-backdrop hidden">
+  <div class="modal-card max-w-2xl w-full" style="max-height: 85vh; overflow-y: auto;">
+    <div class="flex items-start justify-between mb-5">
+      <div>
+        <div class="category-badge mb-2" id="analysisCheckpointLabel">Q50 Checkpoint</div>
+        <h2 class="font-display text-2xl text-white">AI Performance Analysis</h2>
+      </div>
+      <div id="analysisLoader" class="text-teal-400 text-sm font-mono animate-pulse">Analyzing...</div>
+    </div>
+
+    <div id="analysisContent" class="analysis-content text-slate-300 hidden"></div>
+    <div id="analysisError" class="hidden text-rose-400 text-sm p-4 bg-rose-500/10 rounded-lg"></div>
+
+    <div class="mt-6 flex justify-end">
+      <button id="analysisCloseBtn" class="btn-primary hidden" onclick="closeAnalysis()">
+        Continue Exam →
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- FINAL RESULTS SCREEN                                                       -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<div id="results" class="content-layer hidden min-h-screen flex items-center justify-center p-6">
+  <div class="max-w-2xl w-full">
+    <div class="text-center mb-10">
+      <h1 class="font-display text-5xl text-white mb-2">Exam Complete</h1>
+      <p class="text-slate-500">Here's how you performed across all question types.</p>
+    </div>
+
+    <div class="flex justify-center mb-10">
+      <div class="score-ring" id="finalScoreRing">
+        <span id="finalScorePct">0%</span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8" id="resultsBreakdown"></div>
+
+    <div id="categoryBreakdown" class="bowtie-col mb-8"></div>
+
+    <div class="flex justify-center gap-4">
+      <button class="btn-primary" onclick="restartExam()">Retake Exam</button>
+      <button class="btn-secondary" onclick="window.print()">Print Results</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- JAVASCRIPT ENGINE                                                          -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<script>
+// ─── State ────────────────────────────────────────────────────────────────────
+let questions = [];           // Loaded from questions.json
+let currentIndex = 0;
+let score = 0;
+let totalPoints = 0;
+let maxPoints = 0;
+let timerSeconds = 5 * 60 * 60; // 5 hours
+let timerInterval = null;
+let timerVisible = true;
+let answered = false;
+
+// Per-question tracking
+let questionLog = [];         // { id, type, category, correct, pointsEarned }
+let categoryStats = {};       // { [category]: { correct, total } }
+
+// Per-question selections
+let selectedIndex = null;           // MC
+let selectedSata = new Set();       // SATA
+let selectedCenter = null;          // Bowtie
+let selectedActions = new Set();    // Bowtie
+let selectedParams = new Set();     // Bowtie
+let selectedHighlight = new Set();  // Highlight
+let matrixSelections  = {};         // Matrix: { rowIndex: colIndex }
+
+// Checkpoints already fired
+let checkpointsFired = new Set();
+
+// ─── Init ─────────────────────────────────────────────────────────────────────
+async function startExam() {
+  try {
+    const res = await fetch('/questions.json');
+    questions = await res.json();
+  } catch (e) {
+    alert('Could not load questions.json. Make sure it is in the public/ folder.');
+    return;
+  }
+
+  document.getElementById('splash').classList.add('hidden');
+  document.getElementById('exam').classList.remove('hidden');
+  document.getElementById('totalQCount').textContent = questions.length;
+
+  startTimer();
+  renderQuestion();
+}
+
+// ─── Timer ────────────────────────────────────────────────────────────────────
+function startTimer() {
+  timerInterval = setInterval(() => {
+    timerSeconds--;
+    updateTimerDisplay();
+    if (timerSeconds <= 0) {
+      clearInterval(timerInterval);
+      endExam();
+    }
+  }, 1000);
+}
+
+function updateTimerDisplay() {
+  const h = Math.floor(timerSeconds / 3600);
+  const m = Math.floor((timerSeconds % 3600) / 60);
+  const s = timerSeconds % 60;
+  const display = `${h}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+
+  const pill = document.getElementById('timerPill');
+  const disp = document.getElementById('timerDisplay');
+
+  if (timerVisible) {
+    disp.textContent = display;
+  } else {
+    disp.textContent = '—:——:——';
+  }
+
+  pill.classList.remove('warning','danger');
+  if (timerSeconds < 1800) pill.classList.add('danger');
+  else if (timerSeconds < 3600) pill.classList.add('warning');
+}
+
+function toggleTimer() {
+  timerVisible = !timerVisible;
+  document.getElementById('timerEye').style.opacity = timerVisible ? '0.5' : '1';
+  document.getElementById('timerPill').classList.toggle('hidden-timer', !timerVisible);
+  updateTimerDisplay();
+}
+
+// ─── Question Render ──────────────────────────────────────────────────────────
+// Per-question selection state
+let selectedHighlight = new Set();  // for highlight type
+let matrixSelections  = {};         // for matrix type: { rowIndex: colIndex }
+
+function renderQuestion() {
+  if (currentIndex >= questions.length) { endExam(); return; }
+
+  const q = questions[currentIndex];
+  answered = false;
+  selectedIndex = null;
+  selectedSata = new Set();
+  selectedCenter = null;
+  selectedActions = new Set();
+  selectedParams = new Set();
+  selectedHighlight = new Set();
+  matrixSelections = {};
+
+  // Update header
+  document.getElementById('qNum').textContent = currentIndex + 1;
+  document.getElementById('progressFill').style.width = `${((currentIndex) / questions.length) * 100}%`;
+  document.getElementById('scoreDisplay').textContent = score;
+
+  // Category & difficulty
+  document.getElementById('catBadge').textContent = q.category || 'General';
+  document.getElementById('diffBadge').textContent = q.difficulty || '';
+
+  // Checkpoint badge
+  const cpBadge = document.getElementById('checkpointBadge');
+  const cpAt = [50, 100, 150];
+  const next = cpAt.find(c => c === currentIndex + 1 || (currentIndex + 2 === c));
+  cpBadge.classList.toggle('hidden', !next);
+
+  // Type badge
+  const typeLabels = {
+    'multiple-choice': 'MC', 'standard': 'MC',
+    'sata': 'SATA', 'bowtie': 'Bow-Tie',
+    'highlight': 'Highlight', 'matrix': 'Matrix'
+  };
+  document.getElementById('qTypeBadge').textContent = typeLabels[q.type] || q.type;
+
+  // Points info
+  const pts = q.type === 'bowtie' ? '0–5 pts' : (q.type === 'matrix' ? '0–' + q.rows.length + ' pts' : '1 pt');
+  document.getElementById('pointsBadge').textContent = `Point value: ${pts}`;
+
+  // Stem — for highlight, we render the stem separately (instructions only)
+  document.getElementById('questionStem').textContent =
+    q.type === 'highlight' ? q.stem.split('\n\n')[0] : q.stem;
+
+  // Hide rationale / next
+  document.getElementById('rationaleBox').classList.add('hidden');
+  document.getElementById('nextBtn').classList.add('hidden');
+
+  // Render options
+  const container = document.getElementById('optionsContainer');
+  container.innerHTML = '';
+
+  if (q.type === 'multiple-choice' || q.type === 'standard') {
+    renderMC(q, container);
+  } else if (q.type === 'sata') {
+    renderSATA(q, container);
+  } else if (q.type === 'bowtie') {
+    renderBowtie(q, container);
+  } else if (q.type === 'highlight') {
+    renderHighlight(q, container);
+  } else if (q.type === 'matrix') {
+    renderMatrix(q, container);
+  }
+
+  updateSubmitButton();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ── MC (also handles type === 'standard') ──
+function renderMC(q, container) {
+  const letters = ['A','B','C','D','E','F'];
+  q.options.forEach((opt, i) => {
+    const div = document.createElement('div');
+    div.className = 'option-card mb-3';
+    div.innerHTML = `
+      <span class="text-teal-400 font-mono font-medium mt-0.5">${letters[i]}</span>
+      <span class="text-slate-200 leading-relaxed">${opt}</span>
+    `;
+    div.addEventListener('click', () => {
+      if (answered) return;
+      selectedIndex = i;
+      document.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
+      div.classList.add('selected');
+      updateSubmitButton();
+    });
+    container.appendChild(div);
+  });
+}
+
+// ── HIGHLIGHT ──
+function renderHighlight(q, container) {
+  // Instruction note
+  const note = document.createElement('p');
+  note.className = 'text-amber-400 text-sm mb-4 font-medium';
+  const needed = q.correctAnswer.split(',').length;
+  note.textContent = `▸ Click to highlight exactly ${needed} finding${needed > 1 ? 's' : ''} that answer the question.`;
+  container.appendChild(note);
+
+  // The passage — each option is a clickable inline segment
+  const passage = document.createElement('div');
+  passage.className = 'highlight-passage';
+
+  q.options.forEach((segment, i) => {
+    const span = document.createElement('span');
+    span.className = 'highlight-segment';
+    span.dataset.index = i;
+    span.textContent = ' ' + segment + ' ';
+
+    span.addEventListener('click', () => {
+      if (answered) return;
+      if (selectedHighlight.has(i)) {
+        selectedHighlight.delete(i);
+        span.classList.remove('selected');
+      } else {
+        // Limit selection to the number of correct answers
+        if (selectedHighlight.size < needed) {
+          selectedHighlight.add(i);
+          span.classList.add('selected');
         }
-    </script>
+      }
+      updateSubmitButton();
+    });
+
+    passage.appendChild(span);
+
+    // Add a visual separator between segments (soft newline feel)
+    if (i < q.options.length - 1) {
+      passage.appendChild(document.createTextNode(' '));
+    }
+  });
+
+  container.appendChild(passage);
+
+  const hint = document.createElement('p');
+  hint.className = 'highlight-note';
+  hint.textContent = `Select ${needed} segment${needed > 1 ? 's' : ''}. Click a highlighted segment again to deselect it.`;
+  container.appendChild(hint);
+}
+
+// ── MATRIX ──
+function renderMatrix(q, container) {
+  const note = document.createElement('p');
+  note.className = 'text-amber-400 text-sm mb-4 font-medium';
+  note.textContent = '▸ For each row, select the single most appropriate column category.';
+  container.appendChild(note);
+
+  const tableWrap = document.createElement('div');
+  tableWrap.style.overflowX = 'auto';
+
+  const table = document.createElement('table');
+  table.className = 'matrix-table';
+
+  // Header row
+  const thead = document.createElement('thead');
+  const headerRow = document.createElement('tr');
+  const thBlank = document.createElement('th');
+  thBlank.textContent = 'Finding / Scenario';
+  headerRow.appendChild(thBlank);
+  q.columns.forEach(col => {
+    const th = document.createElement('th');
+    th.textContent = col;
+    headerRow.appendChild(th);
+  });
+  thead.appendChild(headerRow);
+  table.appendChild(thead);
+
+  // Body rows
+  const tbody = document.createElement('tbody');
+  q.rows.forEach((row, rowIdx) => {
+    const tr = document.createElement('tr');
+    tr.dataset.row = rowIdx;
+
+    const tdLabel = document.createElement('td');
+    tdLabel.textContent = row;
+    tdLabel.style.fontWeight = '500';
+    tdLabel.style.maxWidth = '340px';
+    tr.appendChild(tdLabel);
+
+    q.columns.forEach((col, colIdx) => {
+      const td = document.createElement('td');
+      td.style.textAlign = 'center';
+
+      const radio = document.createElement('div');
+      radio.className = 'matrix-radio';
+      radio.dataset.row = rowIdx;
+      radio.dataset.col = colIdx;
+
+      radio.addEventListener('click', () => {
+        if (answered) return;
+        // Clear other radios in this row
+        document.querySelectorAll(`.matrix-radio[data-row="${rowIdx}"]`).forEach(r => {
+          r.classList.remove('selected');
+          r.innerHTML = '';
+        });
+        matrixSelections[rowIdx] = colIdx;
+        radio.classList.add('selected');
+        updateSubmitButton();
+      });
+
+      td.appendChild(radio);
+      tr.appendChild(td);
+    });
+
+    tbody.appendChild(tr);
+  });
+  table.appendChild(tbody);
+  tableWrap.appendChild(table);
+  container.appendChild(tableWrap);
+}
+
+// ── SATA ──
+function renderSATA(q, container) {
+  const note = document.createElement('p');
+  note.className = 'text-amber-400 text-sm mb-4 font-medium';
+  note.textContent = '▸ Select all that apply. There may be more than one correct answer.';
+  container.appendChild(note);
+
+  const letters = ['A','B','C','D','E','F'];
+  q.options.forEach((opt, i) => {
+    const div = document.createElement('div');
+    div.className = 'option-card mb-3';
+    div.innerHTML = `
+      <span class="text-teal-400 font-mono font-medium mt-0.5">${letters[i]}</span>
+      <span class="text-slate-200 leading-relaxed flex-1">${opt}</span>
+      <span class="sata-check text-lg" style="min-width:20px"></span>
+    `;
+    div.addEventListener('click', () => {
+      if (answered) return;
+      if (selectedSata.has(i)) {
+        selectedSata.delete(i);
+        div.classList.remove('selected');
+        div.querySelector('.sata-check').textContent = '';
+      } else {
+        selectedSata.add(i);
+        div.classList.add('selected');
+        div.querySelector('.sata-check').textContent = '✓';
+      }
+      updateSubmitButton();
+    });
+    container.appendChild(div);
+  });
+}
+
+// ── BOWTIE ──
+function renderBowtie(q, container) {
+  const note = document.createElement('p');
+  note.className = 'text-amber-400 text-sm mb-4 font-medium';
+  note.textContent = '▸ Select 1 condition (center), 2 actions (left), and 2 monitoring parameters (right).';
+  container.appendChild(note);
+
+  const grid = document.createElement('div');
+  grid.className = 'grid grid-cols-1 md:grid-cols-3 gap-4';
+
+  // Actions column
+  const actCol = document.createElement('div');
+  actCol.className = 'bowtie-col';
+  actCol.innerHTML = `<h3 class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3">Nursing Actions<br/><span class="text-teal-400 normal-case text-xs tracking-normal">Select 2</span></h3>`;
+  q.actionOptions.forEach((opt, i) => {
+    const d = makeBowtieOption(opt, i, 'action');
+    actCol.appendChild(d);
+  });
+
+  // Center column
+  const cenCol = document.createElement('div');
+  cenCol.className = 'bowtie-col border-teal-500/30';
+  cenCol.innerHTML = `<h3 class="text-xs font-semibold uppercase tracking-widest text-teal-400 mb-3">Client Condition<br/><span class="text-teal-400 normal-case text-xs tracking-normal">Select 1</span></h3>`;
+  q.centerOptions.forEach((opt, i) => {
+    const d = makeBowtieOption(opt, i, 'center');
+    cenCol.appendChild(d);
+  });
+
+  // Parameters column
+  const parCol = document.createElement('div');
+  parCol.className = 'bowtie-col';
+  parCol.innerHTML = `<h3 class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3">Monitoring Parameters<br/><span class="text-teal-400 normal-case text-xs tracking-normal">Select 2</span></h3>`;
+  q.parameterOptions.forEach((opt, i) => {
+    const d = makeBowtieOption(opt, i, 'param');
+    parCol.appendChild(d);
+  });
+
+  grid.appendChild(actCol);
+  grid.appendChild(cenCol);
+  grid.appendChild(parCol);
+  container.appendChild(grid);
+}
+
+function makeBowtieOption(text, index, type) {
+  const d = document.createElement('div');
+  d.className = 'bowtie-option mb-2';
+  d.dataset.type = type;
+  d.dataset.index = index;
+  d.textContent = text;
+
+  d.addEventListener('click', () => {
+    if (answered) return;
+    if (type === 'center') {
+      document.querySelectorAll('[data-type="center"]').forEach(el => el.classList.remove('selected'));
+      selectedCenter = index;
+      d.classList.add('selected');
+    } else if (type === 'action') {
+      if (selectedActions.has(index)) {
+        selectedActions.delete(index);
+        d.classList.remove('selected');
+      } else if (selectedActions.size < 2) {
+        selectedActions.add(index);
+        d.classList.add('selected');
+      }
+    } else if (type === 'param') {
+      if (selectedParams.has(index)) {
+        selectedParams.delete(index);
+        d.classList.remove('selected');
+      } else if (selectedParams.size < 2) {
+        selectedParams.add(index);
+        d.classList.add('selected');
+      }
+    }
+    updateSubmitButton();
+  });
+  return d;
+}
+
+// ─── Submit Logic ─────────────────────────────────────────────────────────────
+function updateSubmitButton() {
+  const q = questions[currentIndex];
+  let ready = false;
+
+  if (q.type === 'multiple-choice' || q.type === 'standard') {
+    ready = selectedIndex !== null;
+  } else if (q.type === 'sata') {
+    ready = selectedSata.size > 0;
+  } else if (q.type === 'bowtie') {
+    ready = (selectedCenter !== null && selectedActions.size === 2 && selectedParams.size === 2);
+  } else if (q.type === 'highlight') {
+    const needed = q.correctAnswer.split(',').length;
+    ready = selectedHighlight.size === needed;
+  } else if (q.type === 'matrix') {
+    ready = Object.keys(matrixSelections).length === q.rows.length;
+  }
+
+  document.getElementById('submitBtn').disabled = !ready;
+}
+
+function submitAnswer() {
+  if (answered) return;
+  answered = true;
+
+  const q = questions[currentIndex];
+  let isCorrect = false;
+  let pointsEarned = 0;
+
+  if (q.type === 'multiple-choice' || q.type === 'standard') {
+    // correctAnswer is the text of the correct option
+    const correctIdx = q.options.indexOf(q.correctAnswer);
+    isCorrect = (selectedIndex === correctIdx);
+    pointsEarned = isCorrect ? 1 : 0;
+    revealMC(q, correctIdx);
+
+  } else if (q.type === 'sata') {
+    // correctAnswer is a comma-separated string of correct option texts
+    const correctTexts = q.correctAnswer.split(',').map(s => s.trim());
+    const correctIdxSet = new Set(correctTexts.map(t => q.options.indexOf(t)).filter(i => i >= 0));
+    isCorrect = (
+      selectedSata.size === correctIdxSet.size &&
+      [...selectedSata].every(i => correctIdxSet.has(i))
+    );
+    pointsEarned = isCorrect ? 1 : 0;
+    revealSATA(q, correctIdxSet);
+
+  } else if (q.type === 'bowtie') {
+    // correctCenter/correctActions/correctParameters are text strings
+    const centerOk = (q.centerOptions[selectedCenter] === q.correctCenter);
+    const actionsOk = [...selectedActions].filter(i => q.correctActions.includes(q.actionOptions[i])).length;
+    const paramsOk  = [...selectedParams].filter(i => q.correctParameters.includes(q.parameterOptions[i])).length;
+    pointsEarned = (centerOk ? 1 : 0) + actionsOk + paramsOk;
+    isCorrect = pointsEarned === 5;
+    revealBowtie(q);
+
+  } else if (q.type === 'highlight') {
+    // correctAnswer is comma-separated list of correct option texts
+    const correctTexts = q.correctAnswer.split(',').map(s => s.trim());
+    const correctIdxSet = new Set(correctTexts.map(t => q.options.indexOf(t)).filter(i => i >= 0));
+    isCorrect = (
+      selectedHighlight.size === correctIdxSet.size &&
+      [...selectedHighlight].every(i => correctIdxSet.has(i))
+    );
+    pointsEarned = isCorrect ? 1 : 0;
+    revealHighlight(q, correctIdxSet);
+
+  } else if (q.type === 'matrix') {
+    // correctAnswer is an object mapping row text → column text
+    let correctCount = 0;
+    q.rows.forEach((row, rowIdx) => {
+      const selectedColIdx = matrixSelections[rowIdx];
+      const selectedColText = q.columns[selectedColIdx];
+      if (selectedColText === q.correctAnswer[row]) correctCount++;
+    });
+    pointsEarned = correctCount;
+    isCorrect = correctCount === q.rows.length;
+    revealMatrix(q);
+  }
+
+  if (isCorrect || pointsEarned > 0) score++;
+  totalPoints += pointsEarned;
+  const maxForType = q.type === 'bowtie' ? 5 : q.type === 'matrix' ? q.rows.length : 1;
+  maxPoints += maxForType;
+
+  // Log
+  questionLog.push({ id: q.id, type: q.type, category: q.category, correct: isCorrect || pointsEarned > 0, pointsEarned });
+  if (!categoryStats[q.category]) categoryStats[q.category] = { correct: 0, total: 0 };
+  categoryStats[q.category].total++;
+  if (isCorrect || pointsEarned > 0) categoryStats[q.category].correct++;
+
+  // Update UI
+  document.getElementById('scoreDisplay').textContent = score;
+
+  // Point label
+  let ptLabel = '';
+  if (q.type === 'bowtie') ptLabel = `${pointsEarned}/5 points`;
+  else if (q.type === 'matrix') ptLabel = `${pointsEarned}/${q.rows.length} points`;
+  else ptLabel = isCorrect ? '1/1 point' : '0/1 points';
+
+  // Show rationale
+  const box = document.getElementById('rationaleBox');
+  box.classList.remove('hidden');
+  document.getElementById('resultIcon').textContent = isCorrect ? '✅' : (pointsEarned > 0 ? '⚡' : '❌');
+  document.getElementById('resultLabel').textContent = isCorrect ? 'Correct!' : (pointsEarned > 0 ? 'Partial Credit' : 'Incorrect');
+  document.getElementById('pointsEarned').textContent = ptLabel;
+  document.getElementById('rationaleText').textContent = q.rationale;
+
+  document.getElementById('submitBtn').disabled = true;
+  document.getElementById('nextBtn').classList.remove('hidden');
+}
+
+// ─── Reveal Helpers ───────────────────────────────────────────────────────────
+function revealMC(q, correctIdx) {
+  const cards = document.querySelectorAll('.option-card');
+  cards.forEach((card, i) => {
+    card.classList.add('locked');
+    card.classList.remove('selected');
+    if (i === correctIdx) card.classList.add('correct');
+    else if (i === selectedIndex) card.classList.add('incorrect');
+  });
+}
+
+function revealSATA(q, correctIdxSet) {
+  const cards = document.querySelectorAll('.option-card');
+  cards.forEach((card, i) => {
+    card.classList.add('locked');
+    card.classList.remove('selected');
+    const chk = card.querySelector('.sata-check');
+    if (correctIdxSet.has(i)) {
+      card.classList.add('correct');
+      if (chk) chk.textContent = '✓';
+    } else if (selectedSata.has(i)) {
+      card.classList.add('incorrect');
+      if (chk) chk.textContent = '✗';
+    }
+  });
+}
+
+function revealBowtie(q) {
+  document.querySelectorAll('[data-type]').forEach(el => {
+    el.classList.add('locked');
+    const i = parseInt(el.dataset.index);
+    const t = el.dataset.type;
+    el.classList.remove('selected');
+
+    if (t === 'center') {
+      const isCorrect = q.centerOptions[i] === q.correctCenter;
+      if (isCorrect) el.classList.add('correct');
+      else if (i === selectedCenter) el.classList.add('incorrect');
+    } else if (t === 'action') {
+      const isCorrect = q.correctActions.includes(q.actionOptions[i]);
+      if (isCorrect) el.classList.add('correct');
+      else if (selectedActions.has(i)) el.classList.add('incorrect');
+    } else if (t === 'param') {
+      const isCorrect = q.correctParameters.includes(q.parameterOptions[i]);
+      if (isCorrect) el.classList.add('correct');
+      else if (selectedParams.has(i)) el.classList.add('incorrect');
+    }
+  });
+}
+
+function revealHighlight(q, correctIdxSet) {
+  document.querySelectorAll('.highlight-segment').forEach(span => {
+    span.classList.add('locked');
+    const i = parseInt(span.dataset.index);
+    span.classList.remove('selected');
+    if (correctIdxSet.has(i)) {
+      span.classList.add('correct');
+    } else if (selectedHighlight.has(i)) {
+      span.classList.add('incorrect');
+    }
+  });
+}
+
+function revealMatrix(q) {
+  q.rows.forEach((row, rowIdx) => {
+    const selectedColIdx = matrixSelections[rowIdx];
+    const selectedColText = q.columns[selectedColIdx];
+    const correctColText = q.correctAnswer[row];
+    const correctColIdx = q.columns.indexOf(correctColText);
+    const isRowCorrect = selectedColText === correctColText;
+
+    // Style the row
+    const tr = document.querySelector(`tr[data-row="${rowIdx}"]`);
+    if (tr) tr.classList.add(isRowCorrect ? 'matrix-row-correct' : 'matrix-row-incorrect');
+
+    // Style every radio in this row
+    document.querySelectorAll(`.matrix-radio[data-row="${rowIdx}"]`).forEach(radio => {
+      radio.classList.add('locked');
+      radio.classList.remove('selected');
+      const colIdx = parseInt(radio.dataset.col);
+      if (colIdx === correctColIdx) {
+        radio.classList.add('correct');
+      } else if (colIdx === selectedColIdx && !isRowCorrect) {
+        radio.classList.add('incorrect');
+      }
+    });
+  });
+}
+
+// ─── Next Question + Intercepts ───────────────────────────────────────────────
+function nextQuestion() {
+  const nextIdx = currentIndex + 1; // 0-based, so nextIdx is the UPCOMING question number (1-based = nextIdx+1)
+
+  // Q85 Psychological intervention — fires BEFORE showing Q86
+  if (nextIdx === 85 && !checkpointsFired.has('psych85')) {
+    checkpointsFired.add('psych85');
+    document.getElementById('psych85Score').textContent = `${score}/${nextIdx}`;
+    document.getElementById('psych85Modal').classList.remove('hidden');
+    currentIndex++;
+    return;
+  }
+
+  // AI checkpoints at Q50, Q100, Q150 (fire AFTER that question is answered)
+  const checkpoints = [50, 100, 150];
+  const justAnswered = currentIndex + 1; // 1-based question number we just answered
+  if (checkpoints.includes(justAnswered) && !checkpointsFired.has(`cp${justAnswered}`)) {
+    checkpointsFired.add(`cp${justAnswered}`);
+    currentIndex++;
+    triggerAnalysis(justAnswered);
+    return;
+  }
+
+  currentIndex++;
+  renderQuestion();
+}
+
+function closePsych85() {
+  document.getElementById('psych85Modal').classList.add('hidden');
+  renderQuestion();
+}
+
+// ─── Claude AI Analysis ───────────────────────────────────────────────────────
+async function triggerAnalysis(checkpointQ) {
+  const modal = document.getElementById('analysisModal');
+  const loader = document.getElementById('analysisLoader');
+  const content = document.getElementById('analysisContent');
+  const errDiv = document.getElementById('analysisError');
+  const closeBtn = document.getElementById('analysisCloseBtn');
+
+  document.getElementById('analysisCheckpointLabel').textContent = `Q${checkpointQ} Checkpoint`;
+  modal.classList.remove('hidden');
+  loader.classList.remove('hidden');
+  content.classList.add('hidden');
+  errDiv.classList.add('hidden');
+  closeBtn.classList.add('hidden');
+  content.innerHTML = '';
+
+  // Build weak category list
+  const weakCategories = Object.entries(categoryStats).map(([category, stat]) => ({
+    category, correct: stat.correct, total: stat.total
+  })).sort((a,b) => (a.correct/a.total) - (b.correct/b.total));
+
+  try {
+    const res = await fetch('/api/analyze', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        questionNumber: checkpointQ,
+        totalCorrect: score,
+        totalAnswered: currentIndex,
+        weakCategories,
+        questionLog
+      })
+    });
+
+    const data = await res.json();
+    if (!res.ok || data.error) throw new Error(data.error || 'Unknown error');
+
+    // Render markdown-ish formatting
+    const formatted = data.analysis
+      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\n\n/g, '</p><p class="mb-3">')
+      .replace(/\n/g, '<br/>');
+
+    content.innerHTML = `<p class="mb-3">${formatted}</p>`;
+    content.classList.remove('hidden');
+
+  } catch (err) {
+    errDiv.textContent = `Could not load analysis: ${err.message}. Check that ANTHROPIC_API_KEY is set on the server.`;
+    errDiv.classList.remove('hidden');
+  } finally {
+    loader.classList.add('hidden');
+    closeBtn.classList.remove('hidden');
+  }
+}
+
+function closeAnalysis() {
+  document.getElementById('analysisModal').classList.add('hidden');
+  if (currentIndex >= questions.length) {
+    endExam();
+  } else {
+    renderQuestion();
+  }
+}
+
+// ─── End / Results ────────────────────────────────────────────────────────────
+function endExam() {
+  clearInterval(timerInterval);
+  document.getElementById('exam').classList.add('hidden');
+  document.getElementById('results').classList.remove('hidden');
+
+  const pct = maxPoints > 0 ? Math.round((totalPoints / maxPoints) * 100) : 0;
+  const ring = document.getElementById('finalScoreRing');
+  ring.style.setProperty('--pct', `${pct}%`);
+  document.getElementById('finalScorePct').textContent = `${pct}%`;
+
+  // Breakdown stats — cover all 5 question types
+  const mcQ   = questionLog.filter(q => q.type === 'standard' || q.type === 'multiple-choice');
+  const sataQ = questionLog.filter(q => q.type === 'sata');
+  const btQ   = questionLog.filter(q => q.type === 'bowtie');
+  const hlQ   = questionLog.filter(q => q.type === 'highlight');
+  const mxQ   = questionLog.filter(q => q.type === 'matrix');
+
+  const breakdown = document.getElementById('resultsBreakdown');
+  const stats = [
+    { label: 'Total Score', value: `${totalPoints}/${maxPoints} pts` },
+    { label: 'Accuracy', value: `${pct}%` },
+    { label: 'MC Correct', value: mcQ.length ? `${mcQ.filter(q=>q.correct).length}/${mcQ.length}` : 'N/A' },
+    { label: 'SATA Correct', value: sataQ.length ? `${sataQ.filter(q=>q.correct).length}/${sataQ.length}` : 'N/A' },
+    { label: 'Bow-Tie Pts', value: btQ.length ? `${btQ.reduce((a,q)=>a+q.pointsEarned,0)}/${btQ.length*5}` : 'N/A' },
+    { label: 'Highlight', value: hlQ.length ? `${hlQ.filter(q=>q.correct).length}/${hlQ.length}` : 'N/A' },
+    { label: 'Matrix Pts', value: mxQ.length ? `${mxQ.reduce((a,q)=>a+q.pointsEarned,0)} earned` : 'N/A' },
+    { label: 'Questions', value: `${questionLog.length}/${questions.length}` },
+  ];
+
+  breakdown.innerHTML = stats.map(s => `
+    <div class="bowtie-col text-center">
+      <div class="font-display text-2xl text-white mb-1">${s.value}</div>
+      <div class="text-xs text-slate-500">${s.label}</div>
+    </div>
+  `).join('');
+
+  // Category breakdown
+  const catDiv = document.getElementById('categoryBreakdown');
+  const catRows = Object.entries(categoryStats).map(([cat, stat]) => {
+    const pct = Math.round((stat.correct/stat.total)*100);
+    const bar = `<div class="h-1.5 rounded-full bg-white/5 mt-1"><div class="h-1.5 rounded-full ${pct>=70?'bg-teal-500':'bg-rose-500'}" style="width:${pct}%"></div></div>`;
+    return `<div class="mb-3"><div class="flex justify-between text-sm"><span class="text-slate-300">${cat}</span><span class="${pct>=70?'text-teal-400':'text-rose-400'} font-mono">${stat.correct}/${stat.total} (${pct}%)</span></div>${bar}</div>`;
+  }).join('');
+
+  catDiv.innerHTML = `<h3 class="font-semibold text-white mb-4">Performance by Category</h3>${catRows || '<p class="text-slate-500 text-sm">No data</p>'}`;
+}
+
+function restartExam() {
+  // Reset state
+  currentIndex = 0; score = 0; totalPoints = 0; maxPoints = 0;
+  timerSeconds = 5 * 60 * 60; answered = false;
+  questionLog = []; categoryStats = {}; checkpointsFired = new Set();
+  clearInterval(timerInterval);
+
+  document.getElementById('results').classList.add('hidden');
+  document.getElementById('exam').classList.remove('hidden');
+  startTimer();
+  renderQuestion();
+}
+</script>
 </body>
 </html>
