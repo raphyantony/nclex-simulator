@@ -117,7 +117,7 @@
       border-color: rgba(244,63,94,0.5);
     }
 
-    /* ── Highlight question type ─────────────────────────────────────────── */
+    /* Highlight question type */
     .highlight-passage {
       background: rgba(255,255,255,0.03);
       border: 1px solid rgba(255,255,255,0.08);
@@ -166,7 +166,7 @@
       font-style: italic;
     }
 
-    /* ── Matrix question type ────────────────────────────────────────────── */
+    /* Matrix question type */
     .matrix-table {
       width: 100%;
       border-collapse: separate;
@@ -395,9 +395,7 @@
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
-<!-- SPLASH SCREEN                                                              -->
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- SPLASH SCREEN -->
 <div id="splash" class="content-layer min-h-screen flex items-center justify-center p-6">
   <div class="max-w-xl w-full text-center">
     <div class="mb-6 inline-flex items-center gap-2 text-teal-400 text-sm font-mono tracking-widest uppercase opacity-70">
@@ -447,23 +445,18 @@
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
-<!-- EXAM INTERFACE                                                             -->
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- EXAM INTERFACE -->
 <div id="exam" class="content-layer hidden min-h-screen flex flex-col">
 
   <!-- Top Bar -->
   <div class="border-b border-white/5 bg-navy-900/80 backdrop-blur-sm sticky top-0 z-10">
     <div class="max-w-4xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
-      <!-- Left: Question counter -->
       <div class="flex items-center gap-3">
         <span class="text-white font-display text-xl">Q<span id="qNum">1</span></span>
         <span class="text-slate-600">/</span>
         <span class="text-slate-500 text-sm" id="totalQCount">150</span>
         <div id="qTypeBadge" class="category-badge ml-2">MC</div>
       </div>
-
-      <!-- Center: Progress bar -->
       <div class="flex-1 max-w-xs hidden md:block">
         <div class="progress-bar">
           <div class="progress-fill" id="progressFill" style="width:0%"></div>
@@ -472,8 +465,6 @@
           <span id="scoreDisplay">0</span> correct
         </div>
       </div>
-
-      <!-- Right: Timer -->
       <div id="timerPill" class="timer-pill" onclick="toggleTimer()" title="Click to hide/show time">
         <span id="timerDisplay">5:00:00</span>
         <span id="timerEye" class="ml-2 text-xs opacity-50">👁</span>
@@ -484,22 +475,18 @@
   <!-- Question Area -->
   <div class="flex-1 max-w-4xl mx-auto w-full px-6 py-8">
 
-    <!-- Category + Difficulty -->
     <div class="flex items-center gap-3 mb-5">
       <span id="catBadge" class="category-badge">Pharmacology</span>
       <span id="diffBadge" class="text-xs text-slate-600 uppercase tracking-wider">Medium</span>
       <span id="checkpointBadge" class="checkpoint-badge hidden">⚡ AI Checkpoint Ahead</span>
     </div>
 
-    <!-- Stem -->
     <div class="mb-6">
       <p id="questionStem" class="text-white text-lg leading-relaxed font-body"></p>
     </div>
 
-    <!-- Options container — rendered dynamically -->
     <div id="optionsContainer"></div>
 
-    <!-- Action row -->
     <div class="flex items-center justify-between mt-8 flex-wrap gap-4">
       <div id="pointsBadge" class="text-sm text-slate-500"></div>
       <button id="submitBtn" class="btn-primary" onclick="submitAnswer()" disabled>
@@ -507,7 +494,6 @@
       </button>
     </div>
 
-    <!-- Rationale (shown after submit) -->
     <div id="rationaleBox" class="rationale-box hidden">
       <div class="flex items-center gap-2 mb-3">
         <span id="resultIcon" class="text-2xl"></span>
@@ -517,7 +503,6 @@
       <p id="rationaleText" class="text-slate-300 text-sm leading-relaxed"></p>
     </div>
 
-    <!-- Next button (shown after submit) -->
     <div class="flex justify-end mt-6">
       <button id="nextBtn" class="btn-primary hidden" onclick="nextQuestion()">
         Next Question →
@@ -527,9 +512,7 @@
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
-<!-- MODAL: PSYCHOLOGICAL INTERVENTION (after Q85)                             -->
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- MODAL: Q85 Psychological Intervention -->
 <div id="psych85Modal" class="modal-backdrop hidden">
   <div class="modal-card text-center max-w-lg">
     <div class="text-5xl mb-5">🧠</div>
@@ -553,9 +536,7 @@
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
-<!-- MODAL: AI ANALYSIS CHECKPOINT                                             -->
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- MODAL: AI Analysis Checkpoint -->
 <div id="analysisModal" class="modal-backdrop hidden">
   <div class="modal-card max-w-2xl w-full" style="max-height: 85vh; overflow-y: auto;">
     <div class="flex items-start justify-between mb-5">
@@ -565,10 +546,8 @@
       </div>
       <div id="analysisLoader" class="text-teal-400 text-sm font-mono animate-pulse">Analyzing...</div>
     </div>
-
     <div id="analysisContent" class="analysis-content text-slate-300 hidden"></div>
     <div id="analysisError" class="hidden text-rose-400 text-sm p-4 bg-rose-500/10 rounded-lg"></div>
-
     <div class="mt-6 flex justify-end">
       <button id="analysisCloseBtn" class="btn-primary hidden" onclick="closeAnalysis()">
         Continue Exam →
@@ -577,26 +556,20 @@
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
-<!-- FINAL RESULTS SCREEN                                                       -->
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- FINAL RESULTS -->
 <div id="results" class="content-layer hidden min-h-screen flex items-center justify-center p-6">
   <div class="max-w-2xl w-full">
     <div class="text-center mb-10">
       <h1 class="font-display text-5xl text-white mb-2">Exam Complete</h1>
       <p class="text-slate-500">Here's how you performed across all question types.</p>
     </div>
-
     <div class="flex justify-center mb-10">
       <div class="score-ring" id="finalScoreRing">
         <span id="finalScorePct">0%</span>
       </div>
     </div>
-
     <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8" id="resultsBreakdown"></div>
-
     <div id="categoryBreakdown" class="bowtie-col mb-8"></div>
-
     <div class="flex justify-center gap-4">
       <button class="btn-primary" onclick="restartExam()">Retake Exam</button>
       <button class="btn-secondary" onclick="window.print()">Print Results</button>
@@ -604,44 +577,47 @@
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
-<!-- JAVASCRIPT ENGINE                                                          -->
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- JAVASCRIPT ENGINE -->
 <script>
-// ─── State ────────────────────────────────────────────────────────────────────
-let questions = [];           // Loaded from questions.json
+// State
+let questions = [];
 let currentIndex = 0;
 let score = 0;
 let totalPoints = 0;
 let maxPoints = 0;
-let timerSeconds = 5 * 60 * 60; // 5 hours
+let timerSeconds = 5 * 60 * 60;
 let timerInterval = null;
 let timerVisible = true;
 let answered = false;
 
-// Per-question tracking
-let questionLog = [];         // { id, type, category, correct, pointsEarned }
-let categoryStats = {};       // { [category]: { correct, total } }
+let questionLog = [];
+let categoryStats = {};
 
-// Per-question selections
-let selectedIndex = null;           // MC
-let selectedSata = new Set();       // SATA
-let selectedCenter = null;          // Bowtie
-let selectedActions = new Set();    // Bowtie
-let selectedParams = new Set();     // Bowtie
-let selectedHighlight = new Set();  // Highlight
-let matrixSelections  = {};         // Matrix: { rowIndex: colIndex }
+let selectedIndex = null;
+let selectedSata = new Set();
+let selectedCenter = null;
+let selectedActions = new Set();
+let selectedParams = new Set();
+let selectedHighlight = new Set();
+let matrixSelections = {};
 
-// Checkpoints already fired
 let checkpointsFired = new Set();
 
-// ─── Init ─────────────────────────────────────────────────────────────────────
+// Init
 async function startExam() {
   try {
     const res = await fetch('/questions.json');
+    if (!res.ok) {
+      alert(`Could not load questions.json — server returned ${res.status} ${res.statusText}.\n\nMake sure questions.json is inside the public/ folder.`);
+      return;
+    }
     questions = await res.json();
+    if (!Array.isArray(questions) || questions.length === 0) {
+      alert('questions.json loaded but appears empty or invalid. Check the file contents.');
+      return;
+    }
   } catch (e) {
-    alert('Could not load questions.json. Make sure it is in the public/ folder.');
+    alert(`Error loading questions.json:\n\n${e.message}\n\nMake sure the file is in your public/ folder and is valid JSON.`);
     return;
   }
 
@@ -653,7 +629,7 @@ async function startExam() {
   renderQuestion();
 }
 
-// ─── Timer ────────────────────────────────────────────────────────────────────
+// Timer
 function startTimer() {
   timerInterval = setInterval(() => {
     timerSeconds--;
@@ -670,16 +646,13 @@ function updateTimerDisplay() {
   const m = Math.floor((timerSeconds % 3600) / 60);
   const s = timerSeconds % 60;
   const display = `${h}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
-
   const pill = document.getElementById('timerPill');
   const disp = document.getElementById('timerDisplay');
-
   if (timerVisible) {
     disp.textContent = display;
   } else {
     disp.textContent = '—:——:——';
   }
-
   pill.classList.remove('warning','danger');
   if (timerSeconds < 1800) pill.classList.add('danger');
   else if (timerSeconds < 3600) pill.classList.add('warning');
@@ -692,11 +665,7 @@ function toggleTimer() {
   updateTimerDisplay();
 }
 
-// ─── Question Render ──────────────────────────────────────────────────────────
-// Per-question selection state
-let selectedHighlight = new Set();  // for highlight type
-let matrixSelections  = {};         // for matrix type: { rowIndex: colIndex }
-
+// Question Render
 function renderQuestion() {
   if (currentIndex >= questions.length) { endExam(); return; }
 
@@ -710,22 +679,18 @@ function renderQuestion() {
   selectedHighlight = new Set();
   matrixSelections = {};
 
-  // Update header
   document.getElementById('qNum').textContent = currentIndex + 1;
   document.getElementById('progressFill').style.width = `${((currentIndex) / questions.length) * 100}%`;
   document.getElementById('scoreDisplay').textContent = score;
 
-  // Category & difficulty
   document.getElementById('catBadge').textContent = q.category || 'General';
   document.getElementById('diffBadge').textContent = q.difficulty || '';
 
-  // Checkpoint badge
   const cpBadge = document.getElementById('checkpointBadge');
   const cpAt = [50, 100, 150];
   const next = cpAt.find(c => c === currentIndex + 1 || (currentIndex + 2 === c));
   cpBadge.classList.toggle('hidden', !next);
 
-  // Type badge
   const typeLabels = {
     'multiple-choice': 'MC', 'standard': 'MC',
     'sata': 'SATA', 'bowtie': 'Bow-Tie',
@@ -733,19 +698,15 @@ function renderQuestion() {
   };
   document.getElementById('qTypeBadge').textContent = typeLabels[q.type] || q.type;
 
-  // Points info
   const pts = q.type === 'bowtie' ? '0–5 pts' : (q.type === 'matrix' ? '0–' + q.rows.length + ' pts' : '1 pt');
   document.getElementById('pointsBadge').textContent = `Point value: ${pts}`;
 
-  // Stem — for highlight, we render the stem separately (instructions only)
   document.getElementById('questionStem').textContent =
     q.type === 'highlight' ? q.stem.split('\n\n')[0] : q.stem;
 
-  // Hide rationale / next
   document.getElementById('rationaleBox').classList.add('hidden');
   document.getElementById('nextBtn').classList.add('hidden');
 
-  // Render options
   const container = document.getElementById('optionsContainer');
   container.innerHTML = '';
 
@@ -765,7 +726,7 @@ function renderQuestion() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// ── MC (also handles type === 'standard') ──
+// MC
 function renderMC(q, container) {
   const letters = ['A','B','C','D','E','F'];
   q.options.forEach((opt, i) => {
@@ -786,16 +747,14 @@ function renderMC(q, container) {
   });
 }
 
-// ── HIGHLIGHT ──
+// HIGHLIGHT
 function renderHighlight(q, container) {
-  // Instruction note
   const note = document.createElement('p');
   note.className = 'text-amber-400 text-sm mb-4 font-medium';
   const needed = q.correctAnswer.split(',').length;
   note.textContent = `▸ Click to highlight exactly ${needed} finding${needed > 1 ? 's' : ''} that answer the question.`;
   container.appendChild(note);
 
-  // The passage — each option is a clickable inline segment
   const passage = document.createElement('div');
   passage.className = 'highlight-passage';
 
@@ -811,7 +770,6 @@ function renderHighlight(q, container) {
         selectedHighlight.delete(i);
         span.classList.remove('selected');
       } else {
-        // Limit selection to the number of correct answers
         if (selectedHighlight.size < needed) {
           selectedHighlight.add(i);
           span.classList.add('selected');
@@ -821,8 +779,6 @@ function renderHighlight(q, container) {
     });
 
     passage.appendChild(span);
-
-    // Add a visual separator between segments (soft newline feel)
     if (i < q.options.length - 1) {
       passage.appendChild(document.createTextNode(' '));
     }
@@ -836,7 +792,7 @@ function renderHighlight(q, container) {
   container.appendChild(hint);
 }
 
-// ── MATRIX ──
+// MATRIX
 function renderMatrix(q, container) {
   const note = document.createElement('p');
   note.className = 'text-amber-400 text-sm mb-4 font-medium';
@@ -849,7 +805,6 @@ function renderMatrix(q, container) {
   const table = document.createElement('table');
   table.className = 'matrix-table';
 
-  // Header row
   const thead = document.createElement('thead');
   const headerRow = document.createElement('tr');
   const thBlank = document.createElement('th');
@@ -863,7 +818,6 @@ function renderMatrix(q, container) {
   thead.appendChild(headerRow);
   table.appendChild(thead);
 
-  // Body rows
   const tbody = document.createElement('tbody');
   q.rows.forEach((row, rowIdx) => {
     const tr = document.createElement('tr');
@@ -886,7 +840,6 @@ function renderMatrix(q, container) {
 
       radio.addEventListener('click', () => {
         if (answered) return;
-        // Clear other radios in this row
         document.querySelectorAll(`.matrix-radio[data-row="${rowIdx}"]`).forEach(r => {
           r.classList.remove('selected');
           r.innerHTML = '';
@@ -907,7 +860,7 @@ function renderMatrix(q, container) {
   container.appendChild(tableWrap);
 }
 
-// ── SATA ──
+// SATA
 function renderSATA(q, container) {
   const note = document.createElement('p');
   note.className = 'text-amber-400 text-sm mb-4 font-medium';
@@ -940,7 +893,7 @@ function renderSATA(q, container) {
   });
 }
 
-// ── BOWTIE ──
+// BOWTIE
 function renderBowtie(q, container) {
   const note = document.createElement('p');
   note.className = 'text-amber-400 text-sm mb-4 font-medium';
@@ -950,7 +903,6 @@ function renderBowtie(q, container) {
   const grid = document.createElement('div');
   grid.className = 'grid grid-cols-1 md:grid-cols-3 gap-4';
 
-  // Actions column
   const actCol = document.createElement('div');
   actCol.className = 'bowtie-col';
   actCol.innerHTML = `<h3 class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3">Nursing Actions<br/><span class="text-teal-400 normal-case text-xs tracking-normal">Select 2</span></h3>`;
@@ -959,7 +911,6 @@ function renderBowtie(q, container) {
     actCol.appendChild(d);
   });
 
-  // Center column
   const cenCol = document.createElement('div');
   cenCol.className = 'bowtie-col border-teal-500/30';
   cenCol.innerHTML = `<h3 class="text-xs font-semibold uppercase tracking-widest text-teal-400 mb-3">Client Condition<br/><span class="text-teal-400 normal-case text-xs tracking-normal">Select 1</span></h3>`;
@@ -968,7 +919,6 @@ function renderBowtie(q, container) {
     cenCol.appendChild(d);
   });
 
-  // Parameters column
   const parCol = document.createElement('div');
   parCol.className = 'bowtie-col';
   parCol.innerHTML = `<h3 class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3">Monitoring Parameters<br/><span class="text-teal-400 normal-case text-xs tracking-normal">Select 2</span></h3>`;
@@ -1018,7 +968,7 @@ function makeBowtieOption(text, index, type) {
   return d;
 }
 
-// ─── Submit Logic ─────────────────────────────────────────────────────────────
+// Submit Logic
 function updateSubmitButton() {
   const q = questions[currentIndex];
   let ready = false;
@@ -1048,14 +998,12 @@ function submitAnswer() {
   let pointsEarned = 0;
 
   if (q.type === 'multiple-choice' || q.type === 'standard') {
-    // correctAnswer is the text of the correct option
     const correctIdx = q.options.indexOf(q.correctAnswer);
     isCorrect = (selectedIndex === correctIdx);
     pointsEarned = isCorrect ? 1 : 0;
     revealMC(q, correctIdx);
 
   } else if (q.type === 'sata') {
-    // correctAnswer is a comma-separated string of correct option texts
     const correctTexts = q.correctAnswer.split(',').map(s => s.trim());
     const correctIdxSet = new Set(correctTexts.map(t => q.options.indexOf(t)).filter(i => i >= 0));
     isCorrect = (
@@ -1066,7 +1014,6 @@ function submitAnswer() {
     revealSATA(q, correctIdxSet);
 
   } else if (q.type === 'bowtie') {
-    // correctCenter/correctActions/correctParameters are text strings
     const centerOk = (q.centerOptions[selectedCenter] === q.correctCenter);
     const actionsOk = [...selectedActions].filter(i => q.correctActions.includes(q.actionOptions[i])).length;
     const paramsOk  = [...selectedParams].filter(i => q.correctParameters.includes(q.parameterOptions[i])).length;
@@ -1075,7 +1022,6 @@ function submitAnswer() {
     revealBowtie(q);
 
   } else if (q.type === 'highlight') {
-    // correctAnswer is comma-separated list of correct option texts
     const correctTexts = q.correctAnswer.split(',').map(s => s.trim());
     const correctIdxSet = new Set(correctTexts.map(t => q.options.indexOf(t)).filter(i => i >= 0));
     isCorrect = (
@@ -1086,7 +1032,6 @@ function submitAnswer() {
     revealHighlight(q, correctIdxSet);
 
   } else if (q.type === 'matrix') {
-    // correctAnswer is an object mapping row text → column text
     let correctCount = 0;
     q.rows.forEach((row, rowIdx) => {
       const selectedColIdx = matrixSelections[rowIdx];
@@ -1103,22 +1048,18 @@ function submitAnswer() {
   const maxForType = q.type === 'bowtie' ? 5 : q.type === 'matrix' ? q.rows.length : 1;
   maxPoints += maxForType;
 
-  // Log
   questionLog.push({ id: q.id, type: q.type, category: q.category, correct: isCorrect || pointsEarned > 0, pointsEarned });
   if (!categoryStats[q.category]) categoryStats[q.category] = { correct: 0, total: 0 };
   categoryStats[q.category].total++;
   if (isCorrect || pointsEarned > 0) categoryStats[q.category].correct++;
 
-  // Update UI
   document.getElementById('scoreDisplay').textContent = score;
 
-  // Point label
   let ptLabel = '';
   if (q.type === 'bowtie') ptLabel = `${pointsEarned}/5 points`;
   else if (q.type === 'matrix') ptLabel = `${pointsEarned}/${q.rows.length} points`;
   else ptLabel = isCorrect ? '1/1 point' : '0/1 points';
 
-  // Show rationale
   const box = document.getElementById('rationaleBox');
   box.classList.remove('hidden');
   document.getElementById('resultIcon').textContent = isCorrect ? '✅' : (pointsEarned > 0 ? '⚡' : '❌');
@@ -1130,7 +1071,7 @@ function submitAnswer() {
   document.getElementById('nextBtn').classList.remove('hidden');
 }
 
-// ─── Reveal Helpers ───────────────────────────────────────────────────────────
+// Reveal Helpers
 function revealMC(q, correctIdx) {
   const cards = document.querySelectorAll('.option-card');
   cards.forEach((card, i) => {
@@ -1201,11 +1142,9 @@ function revealMatrix(q) {
     const correctColIdx = q.columns.indexOf(correctColText);
     const isRowCorrect = selectedColText === correctColText;
 
-    // Style the row
     const tr = document.querySelector(`tr[data-row="${rowIdx}"]`);
     if (tr) tr.classList.add(isRowCorrect ? 'matrix-row-correct' : 'matrix-row-incorrect');
 
-    // Style every radio in this row
     document.querySelectorAll(`.matrix-radio[data-row="${rowIdx}"]`).forEach(radio => {
       radio.classList.add('locked');
       radio.classList.remove('selected');
@@ -1219,11 +1158,10 @@ function revealMatrix(q) {
   });
 }
 
-// ─── Next Question + Intercepts ───────────────────────────────────────────────
+// Next Question + Intercepts
 function nextQuestion() {
-  const nextIdx = currentIndex + 1; // 0-based, so nextIdx is the UPCOMING question number (1-based = nextIdx+1)
+  const nextIdx = currentIndex + 1;
 
-  // Q85 Psychological intervention — fires BEFORE showing Q86
   if (nextIdx === 85 && !checkpointsFired.has('psych85')) {
     checkpointsFired.add('psych85');
     document.getElementById('psych85Score').textContent = `${score}/${nextIdx}`;
@@ -1232,9 +1170,8 @@ function nextQuestion() {
     return;
   }
 
-  // AI checkpoints at Q50, Q100, Q150 (fire AFTER that question is answered)
   const checkpoints = [50, 100, 150];
-  const justAnswered = currentIndex + 1; // 1-based question number we just answered
+  const justAnswered = currentIndex + 1;
   if (checkpoints.includes(justAnswered) && !checkpointsFired.has(`cp${justAnswered}`)) {
     checkpointsFired.add(`cp${justAnswered}`);
     currentIndex++;
@@ -1251,7 +1188,7 @@ function closePsych85() {
   renderQuestion();
 }
 
-// ─── Claude AI Analysis ───────────────────────────────────────────────────────
+// Claude AI Analysis
 async function triggerAnalysis(checkpointQ) {
   const modal = document.getElementById('analysisModal');
   const loader = document.getElementById('analysisLoader');
@@ -1267,7 +1204,6 @@ async function triggerAnalysis(checkpointQ) {
   closeBtn.classList.add('hidden');
   content.innerHTML = '';
 
-  // Build weak category list
   const weakCategories = Object.entries(categoryStats).map(([category, stat]) => ({
     category, correct: stat.correct, total: stat.total
   })).sort((a,b) => (a.correct/a.total) - (b.correct/b.total));
@@ -1288,7 +1224,6 @@ async function triggerAnalysis(checkpointQ) {
     const data = await res.json();
     if (!res.ok || data.error) throw new Error(data.error || 'Unknown error');
 
-    // Render markdown-ish formatting
     const formatted = data.analysis
       .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
       .replace(/\n\n/g, '</p><p class="mb-3">')
@@ -1315,7 +1250,7 @@ function closeAnalysis() {
   }
 }
 
-// ─── End / Results ────────────────────────────────────────────────────────────
+// Results
 function endExam() {
   clearInterval(timerInterval);
   document.getElementById('exam').classList.add('hidden');
@@ -1326,7 +1261,6 @@ function endExam() {
   ring.style.setProperty('--pct', `${pct}%`);
   document.getElementById('finalScorePct').textContent = `${pct}%`;
 
-  // Breakdown stats — cover all 5 question types
   const mcQ   = questionLog.filter(q => q.type === 'standard' || q.type === 'multiple-choice');
   const sataQ = questionLog.filter(q => q.type === 'sata');
   const btQ   = questionLog.filter(q => q.type === 'bowtie');
@@ -1352,7 +1286,6 @@ function endExam() {
     </div>
   `).join('');
 
-  // Category breakdown
   const catDiv = document.getElementById('categoryBreakdown');
   const catRows = Object.entries(categoryStats).map(([cat, stat]) => {
     const pct = Math.round((stat.correct/stat.total)*100);
@@ -1364,7 +1297,6 @@ function endExam() {
 }
 
 function restartExam() {
-  // Reset state
   currentIndex = 0; score = 0; totalPoints = 0; maxPoints = 0;
   timerSeconds = 5 * 60 * 60; answered = false;
   questionLog = []; categoryStats = {}; checkpointsFired = new Set();
