@@ -1,4 +1,4 @@
-# NCLEX-RN Clinical Judgment Simulator
+// NCLEX-RN Clinical Judgment Simulator
 
 A full-stack NCLEX exam simulator with Claude AI-powered performance analytics.
 
