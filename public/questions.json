@@ -2781,5 +2781,1432 @@
       "respiratory-failure",
       "leading-cause-death"
     ]
+  },
+  {
+    "id": 101,
+    "type": "standard",
+    "difficulty": "HARD",
+    "category": "Management of Care",
+    "stem": "The triage nurse in the pediatric emergency department is evaluating four clients. Which client should the nurse assess first?",
+    "options": [
+      "A 6-month-old infant with Tetralogy of Fallot who is crying and has an oxygen saturation of 86% on room air.",
+      "A 7-year-old child who is 4 days postoperative following a tonsillectomy and is swallowing frequently while sleeping.",
+      "A 3-year-old child with asthma who has scattered expiratory wheezes and a prolonged expiratory phase.",
+      "A 10-year-old child with cystic fibrosis who has a frequent, productive cough with thick, green sputum."
+    ],
+    "correctAnswer": "A 7-year-old child who is 4 days postoperative following a tonsillectomy and is swallowing frequently while sleeping.",
+    "rationale": "Frequent, continuous swallowing in a post-tonsillectomy child is the hallmark silent sign of postoperative hemorrhage. The child is swallowing blood pooling in the back of the throat — they cannot cry out because they are asleep and the bleeding is silent. Hemorrhage after tonsillectomy can occur up to 14 days postoperatively when the surgical scabs slough off, and this is a life-threatening airway and circulatory emergency. An SpO2 of 86% is the normal, expected baseline for an infant with uncorrected Tetralogy of Fallot due to the right-to-left mixing of oxygenated and deoxygenated blood — this is the child's baseline, not an acute change. Expiratory wheezes with a prolonged expiratory phase are expected findings during an asthma exacerbation — the child needs a bronchodilator but is not in immediate, silent respiratory failure. A productive cough with thick green sputum is the chronic baseline state for a child with cystic fibrosis due to chronic bacterial colonization.",
+    "trapBreakdown": "The trap is Option A (SpO2 of 86%). Students are conditioned to react immediately to any SpO2 below 90% — especially in an infant. The NCLEX tests the critical ability to recognize expected versus unexpected findings based on the specific disease process. An SpO2 of 86% is hypoxic by normal standards but is the physiological baseline for Tetralogy of Fallot. The silent swallowing of blood after tonsillectomy is an unexpected, acute, life-threatening hemorrhage that takes absolute priority.",
+    "trapTags": [
+      "priority-setting",
+      "post-tonsillectomy-hemorrhage",
+      "silent-swallowing",
+      "Tetralogy-of-Fallot-baseline",
+      "expected-vs-unexpected",
+      "pediatric"
+    ]
+  },
+  {
+    "id": 102,
+    "type": "sata",
+    "difficulty": "HARD",
+    "category": "Pharmacological and Parenteral Therapies",
+    "stem": "A 19-year-old female client with severe nodulocystic acne is prescribed oral isotretinoin. The nurse is providing mandatory education prior to initiating the medication. Which statements by the client indicate a correct understanding of the safety requirements? Select all that apply.",
+    "options": [
+      "'I will need to use two reliable forms of birth control simultaneously while taking this medication.'",
+      "'I can continue taking my daily multivitamin to help my skin heal faster.'",
+      "'I must register with the iPLEDGE risk management program before I can get my prescription.'",
+      "'I cannot donate blood while I am taking this medication and for one month after stopping it.'",
+      "'I should stop taking the medication immediately if my skin becomes dry and my lips start to peel.'"
+    ],
+    "correctAnswer": "'I will need to use two reliable forms of birth control simultaneously while taking this medication.', 'I must register with the iPLEDGE risk management program before I can get my prescription.', 'I cannot donate blood while I am taking this medication and for one month after stopping it.'",
+    "rationale": "Using two reliable forms of birth control simultaneously is correct — isotretinoin is FDA Category X and one of the most teratogenic medications available, causing severe, fatal birth defects. Two forms of contraception are mandatory for female clients of childbearing potential. Registering with the iPLEDGE program is correct — this is a mandatory federal Risk Evaluation and Mitigation Strategy (REMS) program requiring monthly pregnancy tests, confirmed contraception, and counseling before each prescription is dispensed. Blood donation prohibition is correct — isotretinoin persists in the blood and if donated blood were transfused to a pregnant woman, it could cause severe fetal malformations. The prohibition lasts one month after stopping the drug. Continuing a multivitamin is INCORRECT — isotretinoin is a derivative of Vitamin A. Standard multivitamins contain Vitamin A, creating additive toxicity causing increased intracranial pressure (pseudotumor cerebri), severe liver damage, and visual changes. Stopping the medication for dry skin and peeling lips is INCORRECT — these are the most common, expected, dose-related side effects of isotretinoin. The client should use moisturizers, lip balm, and eye drops as needed but should never discontinue the medication for these expected effects.",
+    "trapBreakdown": "The trap is Option B (taking a daily multivitamin). Multivitamins are universally perceived as harmless health supplements. Students fail to connect that isotretinoin is essentially a megadose of Vitamin A — adding even a standard multivitamin dose creates cumulative Vitamin A toxicity. The NCLEX tests this connection because it is a real, clinically significant drug-nutrient interaction that students overlook.",
+    "trapTags": [
+      "isotretinoin",
+      "SATA",
+      "iPLEDGE",
+      "teratogenic",
+      "Vitamin-A-toxicity",
+      "multivitamin-contraindicated",
+      "blood-donation-prohibited"
+    ]
+  },
+  {
+    "id": 103,
+    "type": "bowtie",
+    "difficulty": "HARD",
+    "category": "Physiological Adaptation",
+    "stem": "A 35-year-old client is admitted to the neurosurgical ICU following a severe traumatic brain injury. On day 2, the nurse notes a sudden drastic change. Assessment: The client is lethargic and reports extreme thirst. Vital Signs: BP 90/55 mm Hg, HR 122 bpm, RR 20 breaths/min. Intake and Output: The client has produced 4,500 mL of pale, clear urine over the last 4 hours. Laboratory Results: Serum Sodium 158 mEq/L, Urine Specific Gravity 1.002.\n\nComplete the Bow-Tie by selecting the correct Condition, two Actions to Take, and two Parameters to Monitor.",
+    "centerOptions": [
+      "Syndrome of Inappropriate Antidiuretic Hormone (SIADH)",
+      "Diabetes Insipidus (DI)",
+      "Diabetic Ketoacidosis (DKA)"
+    ],
+    "actionOptions": [
+      "Administer intravenous desmopressin (DDAVP)",
+      "Administer a 3% Sodium Chloride IV infusion",
+      "Restrict oral and intravenous fluids",
+      "Administer intravenous hypotonic fluids (0.45% NaCl) or D5W"
+    ],
+    "parameterOptions": [
+      "Hourly urine output and specific gravity",
+      "Serum potassium levels",
+      "Blood glucose levels",
+      "Serum sodium levels"
+    ],
+    "correctCenter": "Diabetes Insipidus (DI)",
+    "correctActions": [
+      "Administer intravenous desmopressin (DDAVP)",
+      "Administer intravenous hypotonic fluids (0.45% NaCl) or D5W"
+    ],
+    "correctParameters": [
+      "Hourly urine output and specific gravity",
+      "Serum sodium levels"
+    ],
+    "rationale": "Head trauma can damage the hypothalamus or posterior pituitary, halting ADH production. Without ADH, the kidneys cannot concentrate urine, producing massive polyuria (4,500 mL in 4 hours), extremely dilute urine (specific gravity 1.002 — essentially water), profound dehydration (hypotension, tachycardia, extreme thirst), and hypernatremia (Na 158) as free water is lost while sodium concentrates. SIADH is the exact opposite — water retention causing hyponatremia and concentrated urine. DKA requires hyperglycemia with ketones as the primary trigger. Desmopressin (DDAVP) is synthetic ADH — it replaces the missing hormone, signaling the kidneys to reabsorb water and stop the massive diuresis. This is the definitive treatment. Hypotonic fluids (0.45% NaCl) or D5W replace the lost free water without adding excess sodium, gradually correcting the hypernatremia — correction must be slow to prevent cerebral edema. Hourly urine output and specific gravity monitor treatment effectiveness — decreasing output and rising specific gravity confirm the kidneys are responding to desmopressin. Serum sodium must be monitored closely because rapid sodium correction during fluid replacement can cause dangerous cerebral edema or osmotic demyelination syndrome.",
+    "trapBreakdown": "The trap is selecting 3% NaCl as a treatment. Students see hypernatremia (Na 158) and may think hypertonic saline is needed — 3% NaCl is actually used for severe hyponatremia (SIADH), the opposite condition. In DI, the problem is loss of free water, not loss of sodium. The treatment is to replace the free water with hypotonic fluids and restore ADH signaling with desmopressin.",
+    "trapTags": [
+      "diabetes-insipidus",
+      "bowtie",
+      "NGN",
+      "desmopressin",
+      "DDAVP",
+      "hypernatremia",
+      "SIADH-vs-DI",
+      "traumatic-brain-injury",
+      "polyuria"
+    ]
+  },
+  {
+    "id": 104,
+    "type": "standard",
+    "difficulty": "HARD",
+    "category": "Physiological Adaptation",
+    "stem": "A client is brought to the emergency department by firefighters after being rescued from a burning house. The client is lethargic, confused, and has a headache. The nurse notes that the client's skin is a bright 'cherry red' color. The pulse oximeter reads an oxygen saturation (SpO2) of 99% on room air. What is the nurse's priority action?",
+    "options": [
+      "Document the SpO2 of 99% and continue to monitor the client's neurological status.",
+      "Apply 100% oxygen via a non-rebreather mask immediately.",
+      "Prepare the client for immediate endotracheal intubation.",
+      "Administer a prescribed intravenous bolus of lactated Ringer's."
+    ],
+    "correctAnswer": "Apply 100% oxygen via a non-rebreather mask immediately.",
+    "rationale": "The client is exhibiting classic signs of Carbon Monoxide (CO) poisoning: headache, confusion, lethargy, and the late sign of cherry-red skin from carboxyhemoglobin. Carbon monoxide binds to hemoglobin with 200 times the affinity of oxygen, displacing oxygen from binding sites and causing severe tissue hypoxia despite normal-appearing hemoglobin saturation. The absolute priority is 100% oxygen via a non-rebreather mask to rapidly decrease the half-life of carboxyhemoglobin and competitively displace CO from hemoglobin. Standard pulse oximetry (SpO2) cannot differentiate between hemoglobin saturated with oxygen and hemoglobin saturated with carbon monoxide — the 99% reading is a critically false normal. The client is severely hypoxic despite the reassuring number. Documenting the SpO2 of 99% and continuing to monitor is dangerous inaction based on a falsely reassuring technology finding. Intubation is required if the client loses their airway or develops respiratory arrest — 100% O2 via NRB mask is the first step for a breathing client. IV fluids are important for burn resuscitation but addressing the immediate, life-threatening tissue hypoxia takes absolute precedence.",
+    "trapBreakdown": "The trap is Option A (document the SpO2 of 99%). Students are trained that SpO2 above 95% is excellent and requires no action. CO poisoning is the highest-yield NCLEX exception to this rule: standard pulse oximetry is completely blind to carboxyhemoglobin. The device measures only whether hemoglobin molecules are bound to something — it cannot distinguish oxygen from carbon monoxide. The technology has a critical, life-threatening limitation in this specific context.",
+    "trapTags": [
+      "carbon-monoxide-poisoning",
+      "cherry-red-skin",
+      "pulse-oximetry-false-normal",
+      "non-rebreather-mask",
+      "SpO2-limitation",
+      "carboxyhemoglobin"
+    ]
+  },
+  {
+    "id": 105,
+    "type": "standard",
+    "difficulty": "HARD",
+    "category": "Safety and Infection Prevention and Control",
+    "stem": "A nurse is administering an intramuscular injection to a client who is known to be HIV-positive. While withdrawing the needle, the client suddenly jerks, and the nurse sustains a deep needlestick injury to their index finger through the glove. What is the nurse's first action?",
+    "options": [
+      "Immediately report the incident to the charge nurse and the occupational health department.",
+      "Squeeze the puncture site vigorously to induce bleeding and flush out the virus.",
+      "Wash the puncture site thoroughly with soap and warm water.",
+      "Proceed to the emergency department to begin post-exposure prophylaxis (PEP) antiretroviral therapy."
+    ],
+    "correctAnswer": "Wash the puncture site thoroughly with soap and warm water.",
+    "rationale": "Following a biological exposure such as a needlestick, the absolute first immediate action is to decontaminate the site. CDC guidelines mandate washing the puncture area thoroughly with soap and water for several minutes — or flushing mucous membranes with water or saline if the exposure involved eyes, nose, or mouth. This mechanical decontamination must happen within seconds. Reporting the incident to the charge nurse and occupational health, and initiating PEP, are critical subsequent steps — PEP should ideally begin within 2 hours of exposure for maximum efficacy, but decontamination must happen first. Squeezing or vigorously milking the puncture site is strictly contraindicated — it causes micro-trauma to surrounding tissue, increases local blood flow, and actually facilitates systemic absorption of bloodborne pathogens rather than preventing it.",
+    "trapBreakdown": "The trap is Option D (go to the ED and start PEP immediately). Students know PEP must be started quickly (ideally within 2 hours) and reason that getting to the ED is the most important urgent action. PEP is critically important — but it comes after decontamination. Washing the wound is a seconds-level intervention; PEP is a minutes-to-hours intervention. Sequence matters: decontaminate first, then report, then start PEP.",
+    "trapTags": [
+      "needlestick",
+      "HIV-exposure",
+      "soap-and-water-first",
+      "PEP",
+      "post-exposure-prophylaxis",
+      "do-not-squeeze",
+      "occupational-exposure"
+    ]
+  },
+  {
+    "id": 106,
+    "type": "matrix",
+    "difficulty": "HARD",
+    "category": "Physiological Adaptation",
+    "stem": "The nurse is working in the obstetrical triage unit. Match each client's clinical presentation to the most likely third-trimester bleeding complication.",
+    "rows": [
+      "Sudden onset of dark red vaginal bleeding, severe continuous abdominal pain, and a rigid 'board-like' abdomen.",
+      "Sudden onset of painless, bright red vaginal bleeding. The abdomen is soft and non-tender.",
+      "Sudden tearing abdominal pain, cessation of uterine contractions, and a loss of fetal station."
+    ],
+    "columns": [
+      "Placenta Previa",
+      "Uterine Rupture",
+      "Abruptio Placentae"
+    ],
+    "correctAnswer": {
+      "Sudden onset of dark red vaginal bleeding, severe continuous abdominal pain, and a rigid 'board-like' abdomen.": "Abruptio Placentae",
+      "Sudden onset of painless, bright red vaginal bleeding. The abdomen is soft and non-tender.": "Placenta Previa",
+      "Sudden tearing abdominal pain, cessation of uterine contractions, and a loss of fetal station.": "Uterine Rupture"
+    },
+    "rationale": "Abruptio Placentae occurs when the placenta prematurely detaches from the uterine wall. Blood pools behind the placenta (producing dark red rather than bright red bleeding), causing intense retroplacental pressure, severe continuous abdominal pain, and a rigid board-like abdomen from blood infiltrating the uterine muscle (Couvelaire uterus). Placenta Previa occurs when the placenta implants over or near the cervical os. As the cervix begins to efface and dilate, placental vessels tear, causing bright red bleeding. Because blood escapes freely rather than pooling behind the placenta, it is characteristically painless and the abdomen remains soft and non-tender. This is the classic painless bleeding of late pregnancy. Uterine Rupture typically occurs along a previous cesarean section scar under the stress of labor. The uterine muscle tears open — contractions suddenly cease because the muscle is disrupted, the fetus slips into the peritoneal cavity (loss of fetal station), and the client experiences sudden tearing abdominal pain with rapidly developing hypovolemic shock.",
+    "trapBreakdown": "The most common confusion is between abruptio placentae and placenta previa — both involve third-trimester bleeding. The key differentiators: abruptio = dark blood + severe pain + rigid abdomen (blood trapped behind placenta); previa = bright red blood + no pain + soft abdomen (blood escaping freely through the cervix). Pain is the critical discriminator between these two diagnoses.",
+    "trapTags": [
+      "third-trimester-bleeding",
+      "matrix",
+      "NGN",
+      "abruptio-placentae",
+      "placenta-previa",
+      "uterine-rupture",
+      "board-like-abdomen",
+      "painless-bleeding"
+    ]
+  },
+  {
+    "id": 107,
+    "type": "standard",
+    "difficulty": "HARD",
+    "category": "Psychosocial Integrity",
+    "stem": "A 55-year-old client was admitted to the orthopedic unit 48 hours ago for a fractured pelvis sustained in a fall. The client has no known medical history. During the night shift, the client becomes severely agitated, disoriented, and reports seeing 'spiders crawling on the walls.' Vital Signs: BP 165/95 mm Hg, HR 128 bpm, RR 24 breaths/min, Temp 101.1°F (38.4°C). The client is profusely diaphoretic and exhibits coarse tremors of the hands. What is the nurse's priority intervention?",
+    "options": [
+      "Administer a prescribed dose of intravenous haloperidol.",
+      "Administer a prescribed dose of intravenous lorazepam.",
+      "Place the client in four-point physical restraints to prevent falls.",
+      "Prepare the client for an immediate CT scan of the head."
+    ],
+    "correctAnswer": "Administer a prescribed dose of intravenous lorazepam.",
+    "rationale": "The client is exhibiting the classic signs of Delirium Tremens (DTs) — a severe, life-threatening form of alcohol withdrawal that peaks 48–72 hours after the last drink. Many clients conceal their alcohol use at admission. The autonomic hyperactivity (tachycardia, hypertension, fever, diaphoresis) and visual hallucinations place the client at imminent risk for fatal withdrawal seizures. IV benzodiazepines (lorazepam, diazepam) are the gold-standard treatment — they depress the CNS, prevent seizures, and stabilize vital signs by replacing the GABA-ergic activity that alcohol was providing. Haloperidol is an antipsychotic that can treat hallucinations but critically lowers the seizure threshold — giving it as monotherapy for alcohol withdrawal dramatically increases the risk of a fatal withdrawal seizure. It is contraindicated as a first-line agent for DTs. Physical restraints increase agitation, worsen hyperthermia, and cause rhabdomyolysis — they do not treat the underlying chemical withdrawal. A head CT may eventually be warranted to rule out intracranial injury from the fall, but the immediate, pharmacologically reversible emergency requires treatment first.",
+    "trapBreakdown": "The trap is Option A (haloperidol). The client is hallucinating — seeing spiders — and students reach for an antipsychotic because that is what treats hallucinations. In alcohol withdrawal, the hallucinations are a symptom of CNS hyperexcitability, not a psychiatric disorder. Haloperidol does not address the GABA deficit and actively lowers the seizure threshold. Benzodiazepines treat the root neurochemical cause — GABA replacement — and are the only appropriate first-line treatment.",
+    "trapTags": [
+      "delirium-tremens",
+      "alcohol-withdrawal",
+      "lorazepam",
+      "haloperidol-contraindicated",
+      "seizure-threshold",
+      "48-72-hours",
+      "GABA"
+    ]
+  },
+  {
+    "id": 108,
+    "type": "standard",
+    "difficulty": "HARD",
+    "category": "Health Promotion and Maintenance",
+    "stem": "A client at 40 weeks gestation is in active labor and receiving a continuous intravenous infusion of oxytocin. The nurse evaluates the fetal heart rate (FHR) monitor and notes a baseline FHR of 140 bpm with moderate variability. However, the nurse observes consistent, gradual decreases in the FHR that begin after the peak of the contraction and return to baseline after the contraction has ended. What is the nurse's first action?",
+    "options": [
+      "Turn the client onto their left lateral side.",
+      "Administer oxygen at 10 L/min via a non-rebreather mask.",
+      "Stop the intravenous oxytocin infusion.",
+      "Administer an intravenous fluid bolus of lactated Ringer's."
+    ],
+    "correctAnswer": "Stop the intravenous oxytocin infusion.",
+    "rationale": "The FHR tracing describes late decelerations — the deceleration begins after the contraction peaks and recovers after the contraction ends. Using the VEAL CHOP mnemonic (Late decelerations = Placental insufficiency), this indicates the fetus is not receiving adequate oxygen during uterine contractions. When late decelerations occur while oxytocin (Pitocin) is infusing, the absolute first action is to stop the oxytocin. Oxytocin causes uterine contractions that temporarily reduce uteroplacental blood flow — stopping the drug immediately removes the primary stressor. Turning to the left side, administering oxygen, and giving an IV fluid bolus (remembered by the acronym LION: Left side, IV fluids, Oxygen, Notify provider) are all correct and necessary intrauterine resuscitation interventions that follow — but when a medication is actively causing the problem, stopping that medication is always the first step before initiating LION.",
+    "trapBreakdown": "The trap is Option A (turn to the left side). Repositioning the client to the left lateral position is the most universally taught and reflexively selected obstetric nursing intervention. Students choose it automatically. The NCLEX specifically tests this exception: when an oxytocin infusion is running and causing late decelerations from placental insufficiency, the medication causing the contractions that are causing the hypoxia must be stopped first. Stop the cause before treating the effect.",
+    "trapTags": [
+      "late-decelerations",
+      "oxytocin",
+      "stop-Pitocin-first",
+      "VEAL-CHOP",
+      "LION",
+      "placental-insufficiency",
+      "fetal-monitoring",
+      "left-lateral-trap"
+    ]
+  },
+  {
+    "id": 109,
+    "type": "sata",
+    "difficulty": "HARD",
+    "category": "Safety and Infection Prevention and Control",
+    "stem": "A client with severe delirium is attempting to pull out their central venous catheter and endotracheal tube. The healthcare provider prescribes bilateral soft wrist restraints. Which nursing actions are required when caring for a client in medical-surgical restraints? Select all that apply.",
+    "options": [
+      "Tie the restraint straps to the movable portion of the bed frame using a quick-release knot.",
+      "Ensure that two fingers can be inserted between the restraint and the client's wrist.",
+      "Remove the restraints every 2 hours to perform range-of-motion exercises and assess skin integrity.",
+      "Obtain a PRN (as needed) prescription for the restraints to use whenever the client becomes agitated.",
+      "Tie the restraint straps securely to the bed side rails to ensure the client cannot reach their tubes."
+    ],
+    "correctAnswer": "Tie the restraint straps to the movable portion of the bed frame using a quick-release knot., Ensure that two fingers can be inserted between the restraint and the client's wrist., Remove the restraints every 2 hours to perform range-of-motion exercises and assess skin integrity.",
+    "rationale": "Restraints must be tied to the movable portion of the bed frame (not the side rails) using a quick-release slip knot — this ensures the restraints move with the bed when repositioned and can be rapidly released in an emergency. A two-finger-width gap between the restraint and the wrist is the standard measurement — the restraint must be snug enough to prevent the client from removing tubes but loose enough to maintain adequate circulation, sensation, and movement. For non-violent medical-surgical restraints, the nurse must release the restraints, assess neurovascular status (pulses, color, temperature, sensation, and movement), assess skin integrity, and perform passive range-of-motion exercises at minimum every 2 hours — with these findings documented each time. PRN prescriptions for restraints are strictly prohibited by Joint Commission standards and federal law — a specific, time-limited order must be obtained for each restraint episode. Tying restraints to side rails is absolutely prohibited — if a side rail is lowered, the traction can violently injure the client's wrist, arm, or shoulder, causing severe musculoskeletal or neurovascular injury.",
+    "trapBreakdown": "The trap is Option E (tie to side rails). Students may reason that side rails are a sturdy, fixed structure that would prevent the client from reaching their tubes. The danger is that when a side rail is lowered — as happens routinely for care — the sudden release of tension can violently wrench the restrained extremity. The bed frame is the only safe attachment point because it moves predictably with the entire bed.",
+    "trapTags": [
+      "restraints",
+      "SATA",
+      "quick-release-knot",
+      "two-finger-rule",
+      "PRN-restraints-prohibited",
+      "side-rails-prohibited",
+      "every-2-hours"
+    ]
+  },
+  {
+    "id": 110,
+    "type": "highlight",
+    "difficulty": "HARD",
+    "category": "Physiological Adaptation",
+    "stem": "A client is 4 hours postoperative following a coronary artery bypass graft (CABG). Highlight the three findings in the nursing assessment that indicate the client is developing a life-threatening cardiac complication.\n\nNursing Note: 'Client is intubated and sedated. The chest tube drainage has suddenly decreased from 100 mL/hr to 10 mL over the last hour. Blood pressure has dropped from 118/70 mm Hg to 88/74 mm Hg. Heart rate is 115 bpm. Auscultation of the chest reveals distant, muffled heart sounds. The client's core body temperature is 97.8°F (36.5°C). The client's central venous pressure (CVP) has increased to 18 mm Hg, and the jugular veins are visibly distended.'",
+    "options": [
+      "The chest tube drainage has suddenly decreased from 100 mL/hr to 10 mL over the last hour.",
+      "Blood pressure has dropped from 118/70 mm Hg to 88/74 mm Hg.",
+      "Auscultation of the chest reveals distant, muffled heart sounds.",
+      "The client's core body temperature is 97.8°F (36.5°C).",
+      "The client's central venous pressure (CVP) has increased to 18 mm Hg, and the jugular veins are visibly distended."
+    ],
+    "correctAnswer": "Blood pressure has dropped from 118/70 mm Hg to 88/74 mm Hg., Auscultation of the chest reveals distant, muffled heart sounds., The client's central venous pressure (CVP) has increased to 18 mm Hg, and the jugular veins are visibly distended.",
+    "correctIndices": [
+      1,
+      2,
+      4
+    ],
+    "rationale": "The client is exhibiting Beck's Triad — the classic clinical presentation of Cardiac Tamponade. After CABG, blood can accumulate in the pericardial sac when chest tubes clot off and fail to drain, compressing the heart and preventing the ventricles from filling. Beck's Triad consists of: (1) Hypotension with a narrowed pulse pressure — BP 88/74 gives a pulse pressure of only 14 mmHg, nearly equal systolic and diastolic values indicating the heart is being squeezed so tightly it cannot generate normal stroke volume; (2) Muffled or distant heart sounds — the surrounding pericardial fluid dampens the normally audible heart sounds; (3) Jugular venous distention and elevated CVP — blood backs up into the systemic venous system because the compressed right heart cannot accept venous return, raising CVP to 18 mmHg and visibly distending the jugular veins. The sudden drop in chest tube drainage from 100 mL/hr to 10 mL is the cause of the tamponade — the tube has clotted, allowing blood to accumulate in the pericardial sac. While highly clinically significant, the question asks for the signs that indicate the complication has developed, not its cause. Beck's Triad represents the definitive physiological markers of tamponade itself. A temperature of 97.8°F is a normal, expected finding post-CABG — mild hypothermia commonly results from cardiopulmonary bypass.",
+    "trapBreakdown": "The trap is missing the narrowed pulse pressure in Option B. Students look for obvious hypotension — a dramatically low systolic number — and may overlook the BP of 88/74 as 'not that low.' The critical finding is the pulse pressure of only 14 mmHg (88 minus 74). A normal pulse pressure is 40 mmHg. When the pericardium fills with blood and compresses the heart, the systolic and diastolic pressures converge — the heart cannot expand during diastole or contract forcefully during systole. Recognizing a narrowed pulse pressure as a hallmark of cardiac tamponade is a high-level clinical judgment skill.",
+    "trapTags": [
+      "cardiac-tamponade",
+      "Beck's-triad",
+      "highlight",
+      "NGN",
+      "CABG",
+      "narrowed-pulse-pressure",
+      "muffled-heart-sounds",
+      "JVD",
+      "CVP-elevated"
+    ]
+  },
+  {
+    "id": 111,
+    "type": "standard",
+    "difficulty": "HARD",
+    "category": "Management of Care",
+    "stem": "A transgender male client (assigned female at birth) is admitted to the medical-surgical unit for an acute asthma exacerbation. The unit only has semi-private (two-bed) rooms available. Which action by the charge nurse demonstrates culturally competent, unbiased care in accordance with health equity standards?",
+    "options": [
+      "Assign the client to a room with a female client based on the client's biological sex at birth.",
+      "Assign the client to a room with a male client based on the client's current gender identity.",
+      "Place the client in a private respiratory isolation room to prevent potential roommate discomfort.",
+      "Consult with the client privately to determine their rooming preference and comfort level."
+    ],
+    "correctAnswer": "Consult with the client privately to determine their rooming preference and comfort level.",
+    "rationale": "According to current health equity and LGBTQ+ affirming care standards, the safest and most respectful approach when assigning a semi-private room to a transgender or gender-nonconforming client is to privately ask the client where they feel safest and most comfortable. The nurse should accommodate the client's stated preference — whether that is rooming with a male client, female client, or requesting a private room if available — to provide unbiased, patient-centered care. Assigning based solely on biological sex ignores the client's gender identity and can cause severe psychological distress and dysphoria. Assigning based on gender identity without asking still makes an assumption that may place the client in an unsafe or vulnerable situation. Isolating the client without medical necessity (asthma does not require isolation) is a form of discrimination and stigmatization.",
+    "trapBreakdown": "The trap is Option B (assign based on gender identity). Students know that respecting gender identity is the right approach, so they select this without realizing that making any room assignment without consulting the client first is still an assumption. The patient-centered, equitable action is always to ask — never to assume, even with good intentions.",
+    "trapTags": [
+      "health-equity",
+      "LGBTQ+",
+      "transgender-care",
+      "rooming-assignment",
+      "patient-centered-care"
+    ]
+  },
+  {
+    "id": 112,
+    "type": "standard",
+    "difficulty": "HARD",
+    "category": "Management of Care",
+    "stem": "A nurse is caring for a high-profile local celebrity who was admitted to the intensive care unit following a severe motor vehicle collision. After a successful resuscitation, the nurse posts the following on their personal, private social media account: 'Rough shift today, but so proud of my trauma team for saving the life of a local hero who had a terrible car crash! We do amazing work.' No names, photos, or hospital identifiers were included in the post. Which statement regarding this action is true?",
+    "options": [
+      "This is not a HIPAA violation because the nurse did not use the client's name or post any photographs.",
+      "This is a HIPAA violation because the client's identity could easily be deduced by the public.",
+      "This is not a HIPAA violation because the nurse's social media account is set to private.",
+      "This is a HIPAA violation only if the nurse posted the comment while actively on duty."
+    ],
+    "correctAnswer": "This is a HIPAA violation because the client's identity could easily be deduced by the public.",
+    "rationale": "Under HIPAA, Protected Health Information includes any information that could reasonably be used to identify a client. Even without a name, mentioning a 'local hero,' a 'terrible car crash,' and the timing of the event provides enough circumstantial data for the public or media to deduce the client's identity — constituting a severe breach of confidentiality. A name or photograph is not required to violate HIPAA; circumstantial identifiers such as time, place, and unique events are equally protected under federal law. Setting an account to 'private' does not eliminate HIPAA liability — digital content can be screenshotted and shared instantly, and there is no expectation of privacy once PHI is posted online. HIPAA applies 24 hours a day, 7 days a week, regardless of whether the nurse is on duty, off duty, or retired.",
+    "trapBreakdown": "The trap is Option A (no names or photos were used). Students believe that omitting the patient's name and face makes them legally safe. The NCLEX requires nurses to know that circumstantial identifiers — timing, unique clinical events, the phrase 'local hero' combined with 'terrible car crash' — are equally protected as direct identifiers under HIPAA's 18-identifier framework.",
+    "trapTags": [
+      "HIPAA",
+      "social-media",
+      "PHI",
+      "confidentiality",
+      "circumstantial-identifiers",
+      "celebrity-patient"
+    ]
+  },
+  {
+    "id": 113,
+    "type": "standard",
+    "difficulty": "HARD",
+    "category": "Reduction of Risk Potential",
+    "stem": "A client with severe sepsis and profound peripheral edema is receiving a continuous intravenous infusion of norepinephrine to maintain their blood pressure. The nurse performs a point-of-care (POC) capillary blood glucose test using a fingerstick, and the glucometer reads 'HI' (indicating a glucose level > 600 mg/dL). The client's previous glucose level 4 hours ago was 140 mg/dL. What is the nurse's first action?",
+    "options": [
+      "Administer the prescribed sliding-scale regular insulin immediately.",
+      "Wash the client's hand with soap and water and repeat the capillary fingerstick.",
+      "Obtain a venous blood sample and send it to the laboratory for a serum glucose level.",
+      "Notify the healthcare provider to request an order for a continuous insulin infusion."
+    ],
+    "correctAnswer": "Obtain a venous blood sample and send it to the laboratory for a serum glucose level.",
+    "rationale": "POC capillary glucometers are highly unreliable in clients with severe peripheral edema, hypotension, or those receiving vasopressors such as norepinephrine. Vasoconstriction shunts blood away from the extremities, meaning the capillary blood sample does not accurately reflect the core systemic glucose level. A sudden extreme jump from 140 to greater than 600 mg/dL in a poorly perfused client must be verified with a venous or arterial blood draw before administering any insulin. Administering insulin based on an unverified, likely erroneous capillary reading in a client with severe peripheral vasoconstriction could cause fatal hypoglycemia. Repeating the capillary test on an edematous, poorly perfused finger will yield another inaccurate result — the underlying perfusion problem makes all fingerstick results unreliable regardless of technique.",
+    "trapBreakdown": "The trap is Option B (wash hands and repeat the fingerstick). Students know that contamination (like sugar residue on the skin) can cause false-high readings, so repeating after washing seems like a logical first step. However, the fundamental problem is not skin contamination — it is the client's severe peripheral vasoconstriction from norepinephrine and sepsis, which makes any capillary sample physiologically invalid. Repeating the same flawed test yields another flawed result.",
+    "trapTags": [
+      "point-of-care-testing",
+      "glucometer-unreliable",
+      "vasopressors",
+      "peripheral-edema",
+      "false-high-glucose",
+      "venous-sample"
+    ]
+  },
+  {
+    "id": 114,
+    "type": "bowtie",
+    "difficulty": "HARD",
+    "category": "Physiological Adaptation",
+    "stem": "A 28-year-old client is 45 minutes postoperative following an open appendectomy under general anesthesia. Assessment: The PACU nurse notes the client's jaw is tightly clenched, and their skeletal muscles feel rigid. Vital Signs: BP 160/90 mm Hg, HR 145 bpm, RR 32 breaths/min, SpO2 92% on 4L nasal cannula. The client's core body temperature has rapidly risen to 104.2°F (40.1°C). Laboratory Results: Arterial Blood Gas reveals a PaCO2 of 65 mm Hg.\n\nComplete the Bow-Tie by selecting the correct Condition, two Actions to Take, and two Parameters to Monitor.",
+    "centerOptions": [
+      "Malignant Hyperthermia",
+      "Neuroleptic Malignant Syndrome (NMS)",
+      "Thyroid Storm"
+    ],
+    "actionOptions": [
+      "Administer intravenous dantrolene sodium",
+      "Administer intravenous flumazenil",
+      "Apply cooling blankets and ice packs to the axillae and groin",
+      "Administer intravenous naloxone"
+    ],
+    "parameterOptions": [
+      "Urine output and color",
+      "Deep tendon reflexes",
+      "Hourly blood glucose",
+      "Serum potassium levels"
+    ],
+    "correctCenter": "Malignant Hyperthermia",
+    "correctActions": [
+      "Administer intravenous dantrolene sodium",
+      "Apply cooling blankets and ice packs to the axillae and groin"
+    ],
+    "correctParameters": [
+      "Urine output and color",
+      "Serum potassium levels"
+    ],
+    "rationale": "Malignant Hyperthermia is a rare, life-threatening genetic muscle disorder triggered by volatile anesthetic gases and succinylcholine. The classic presentation is hypercapnia (elevated PaCO2 of 65 mmHg is often the very first sign), jaw muscle rigidity (masseter spasm), generalized skeletal muscle rigidity, tachycardia, and a rapid extreme spike in core body temperature — all present here. NMS is caused by antipsychotics and presents more slowly outside the operating room context. Thyroid storm does not cause muscle rigidity or intraoperative onset. IV dantrolene sodium is the specific life-saving antidote — it directly inhibits calcium release in muscle cells, stopping the hypermetabolic crisis. Aggressive active cooling with blankets and ice packs to major vascular areas (axillae, groin, neck) is required to prevent fatal hyperthermia-induced brain damage. Urine output and color must be monitored because severe muscle breakdown (rhabdomyolysis) releases myoglobin that clogs the renal tubules, causing acute kidney injury — urine turns dark brown or red. Serum potassium must be monitored because massive muscle cell destruction releases intracellular potassium into the bloodstream, causing life-threatening hyperkalemia and cardiac dysrhythmias.",
+    "trapBreakdown": "The trap is confusing Malignant Hyperthermia with NMS — both cause hyperthermia and muscle rigidity and are treated with dantrolene. The critical differentiator is context and onset: MH occurs in the operating room within minutes of anesthetic exposure (triggered by anesthesia). NMS develops over days in patients taking antipsychotic medications. An intraoperative PACU presentation with hypercapnia as an early sign is MH until proven otherwise.",
+    "trapTags": [
+      "malignant-hyperthermia",
+      "bowtie",
+      "NGN",
+      "dantrolene",
+      "PACU",
+      "rhabdomyolysis",
+      "MH-vs-NMS",
+      "hypercapnia"
+    ]
+  },
+  {
+    "id": 115,
+    "type": "sata",
+    "difficulty": "HARD",
+    "category": "Pharmacological and Parenteral Therapies",
+    "stem": "A client is brought to the emergency department after an intentional overdose of amitriptyline, a tricyclic antidepressant (TCA). Which clinical manifestations and assessment findings require immediate life-saving intervention by the nurse? Select all that apply.",
+    "options": [
+      "A widened QRS complex on the electrocardiogram (ECG).",
+      "Severe bradycardia with a heart rate of 42 bpm.",
+      "New-onset generalized tonic-clonic seizures.",
+      "Hyperactive bowel sounds and severe diarrhea.",
+      "A blood pressure of 70/40 mm Hg."
+    ],
+    "correctAnswer": "A widened QRS complex on the electrocardiogram (ECG)., New-onset generalized tonic-clonic seizures., A blood pressure of 70/40 mm Hg.",
+    "rationale": "TCAs are highly cardiotoxic in overdose through sodium channel blockade, producing a widened QRS complex — the hallmark precursor to fatal ventricular dysrhythmias including Torsades de Pointes and ventricular fibrillation. This requires immediate IV sodium bicarbonate administration. TCA toxicity causes severe CNS irritability leading to intractable seizures requiring immediate benzodiazepine treatment. Profound hypotension results from alpha-adrenergic blockade and requires IV fluids and vasopressors. Bradycardia is incorrect because TCAs have strong anticholinergic properties that block the parasympathetic 'rest and digest' system, causing tachycardia — not bradycardia. An overdose of a TCA speeds the heart dangerously, not slows it. Hyperactive bowel sounds and diarrhea are also incorrect because anticholinergic effects slow gastrointestinal motility, causing hypoactive bowel sounds, paralytic ileus, and constipation — the opposite of diarrhea.",
+    "trapBreakdown": "The trap is Option B (bradycardia). Students associate psychiatric medication overdose with a generalized slowing of body systems, as seen with opioid or benzodiazepine overdose. TCAs are powerfully anticholinergic — they block the parasympathetic nervous system, causing tachycardia, urinary retention, dry mouth, and constipation. The toxidrome is the opposite of what intuition suggests.",
+    "trapTags": [
+      "TCA-overdose",
+      "amitriptyline",
+      "anticholinergic",
+      "widened-QRS",
+      "sodium-bicarbonate",
+      "SATA",
+      "tachycardia-not-bradycardia"
+    ]
+  },
+  {
+    "id": 116,
+    "type": "standard",
+    "difficulty": "HARD",
+    "category": "Psychosocial Integrity",
+    "stem": "A client with a documented history of severe opioid substance misuse is admitted to the medical unit for treatment of infective endocarditis. Twelve hours after admission, the nurse assesses the client. Which cluster of symptoms indicates the client is experiencing opioid withdrawal rather than opioid intoxication?",
+    "options": [
+      "Pinpoint pupils, respiratory rate of 8 breaths/min, and somnolence.",
+      "Rhinorrhea, frequent yawning, piloerection, and abdominal cramping.",
+      "Slurred speech, unsteady gait, and aggressive behavior.",
+      "Hyperthermia, severe muscle rigidity, and hyperactive deep tendon reflexes."
+    ],
+    "correctAnswer": "Rhinorrhea, frequent yawning, piloerection, and abdominal cramping.",
+    "rationale": "Opioid withdrawal causes a massive rebound activation of the sympathetic nervous system — everything that opioids suppress comes surging back. Classic signs include rhinorrhea (runny nose), lacrimation (tearing eyes), frequent yawning, piloerection (goosebumps — the origin of the term 'cold turkey'), diaphoresis, tachycardia, hypertension, diarrhea, and severe abdominal cramping. Pinpoint pupils (miosis), respiratory depression of 8 breaths/min, and somnolence are the hallmark signs of active opioid intoxication or overdose — the exact opposite of withdrawal. Slurred speech, ataxia, and aggression are signs of alcohol or benzodiazepine intoxication, not opioid withdrawal. Hyperthermia, severe muscle rigidity, and hyperreflexia constitute the presentation of Serotonin Syndrome or Neuroleptic Malignant Syndrome — not opioid withdrawal.",
+    "trapBreakdown": "The trap is Option A (pinpoint pupils and somnolence). Students who memorize opioid facts know that opioids cause miosis and CNS depression, and may confuse the withdrawal state with the intoxication state. The key distinction: intoxication = CNS and respiratory depression with miosis; withdrawal = sympathetic rebound with mydriasis (dilated pupils), rhinorrhea, piloerection, and GI distress.",
+    "trapTags": [
+      "opioid-withdrawal",
+      "opioid-intoxication",
+      "substance-misuse",
+      "sympathetic-rebound",
+      "cold-turkey",
+      "piloerection"
+    ]
+  },
+  {
+    "id": 117,
+    "type": "matrix",
+    "difficulty": "HARD",
+    "category": "Health Promotion and Maintenance",
+    "stem": "The nurse is caring for a client in active labor connected to continuous external electronic fetal monitoring. Match each fetal heart rate (FHR) tracing pattern to the most appropriate priority nursing intervention.",
+    "rows": [
+      "Early Decelerations (mirror the contractions, reaching their lowest point at the peak of the contraction)",
+      "Variable Decelerations (abrupt, V-shaped drops in FHR that occur unpredictably and are unrelated to contractions)",
+      "Late Decelerations (begin after the peak of the contraction and return to baseline after the contraction ends)"
+    ],
+    "columns": [
+      "Discontinue the oxytocin infusion and administer oxygen.",
+      "Document the finding and continue to monitor the client.",
+      "Reposition the client to the left or right lateral position."
+    ],
+    "correctAnswer": {
+      "Early Decelerations (mirror the contractions, reaching their lowest point at the peak of the contraction)": "Document the finding and continue to monitor the client.",
+      "Variable Decelerations (abrupt, V-shaped drops in FHR that occur unpredictably and are unrelated to contractions)": "Reposition the client to the left or right lateral position.",
+      "Late Decelerations (begin after the peak of the contraction and return to baseline after the contraction ends)": "Discontinue the oxytocin infusion and administer oxygen."
+    },
+    "rationale": "Early decelerations are caused by fetal head compression as the fetus descends into the birth canal, producing a uniform mirror image of the uterine contraction. This is a completely normal, benign physiological finding requiring no intervention beyond documentation and continued monitoring. Variable decelerations are caused by umbilical cord compression — the cord is mechanically pinched, cutting off fetal blood flow. The immediate priority is to change the maternal position (left or right lateral, or knee-chest) to shift the fetus off the cord and restore perfusion. Repositioning is the first action because it directly addresses the mechanical cause. Late decelerations are caused by uteroplacental insufficiency — the placenta cannot deliver enough oxygen to the fetus during contractions. Because oxytocin increases contraction frequency and intensity (worsening placental stress), it must be discontinued immediately, and supplemental oxygen is administered to maximize oxygen delivery to the compromised placenta.",
+    "trapBreakdown": "The most common confusion is between variable and late decelerations and their interventions. Both can look alarming on the monitor. The key is mechanism: variable = cord compression = reposition; late = placental insufficiency = stop oxytocin + oxygen. Early decelerations are the benign ones students frequently over-treat — the uniform mirror shape and onset at the contraction peak are the reassuring hallmarks.",
+    "trapTags": [
+      "fetal-monitoring",
+      "matrix",
+      "NGN",
+      "early-decelerations",
+      "variable-decelerations",
+      "late-decelerations",
+      "VEAL-CHOP",
+      "obstetrics"
+    ]
+  },
+  {
+    "id": 118,
+    "type": "standard",
+    "difficulty": "HARD",
+    "category": "Physiological Adaptation",
+    "stem": "A client is admitted to the trauma intensive care unit following a diving accident that resulted in a complete spinal cord injury at the C5 level. Twelve hours after admission, the nurse notes the client's blood pressure is 82/48 mm Hg, heart rate is 44 bpm, and the skin on the client's arms and chest is warm, dry, and flushed. What is the nurse's priority action?",
+    "options": [
+      "Elevate the head of the bed to 90 degrees immediately.",
+      "Administer a prescribed intravenous bolus of normal saline and prepare to administer atropine.",
+      "Assess the client's indwelling urinary catheter for kinks or blockages.",
+      "Prepare the client for an immediate transfusion of packed red blood cells (PRBCs)."
+    ],
+    "correctAnswer": "Administer a prescribed intravenous bolus of normal saline and prepare to administer atropine.",
+    "rationale": "The client is experiencing Neurogenic Shock — a distributive shock that occurs after spinal cord injuries above the T6 level. The injury severs the descending sympathetic nervous system pathways, leaving the parasympathetic system unopposed. This causes massive systemic vasodilation (hypotension and warm, flushed skin due to cutaneous vasodilation) combined with severe bradycardia (HR 44) from unopposed vagal tone. The priority treatment is IV fluid bolus to restore intravascular volume and atropine to treat the symptomatic bradycardia, followed by vasopressors if needed. Elevating the HOB to 90 degrees and checking the urinary catheter are interventions for Autonomic Dysreflexia — which presents with severe hypertension (BP 210/110), not hypotension. Elevating the HOB of a hypotensive client (BP 82/48) would cause loss of cerebral perfusion. PRBCs are indicated for hemorrhagic shock, which presents with tachycardia (not bradycardia at 44) and cool, pale, clammy skin — the opposite of the warm, flushed presentation seen in neurogenic shock.",
+    "trapBreakdown": "The trap is Option A (elevate the head of the bed). Students see 'spinal cord injury' and immediately think of the most famous SCI complication: Autonomic Dysreflexia, which is treated by sitting the patient upright. However, autonomic dysreflexia produces severe hypertension — not hypotension. Reading the vital signs is critical: low BP + low HR + warm flushed skin = neurogenic shock = give fluids and atropine. High BP + low HR + diaphoresis above injury = autonomic dysreflexia = sit the patient up.",
+    "trapTags": [
+      "neurogenic-shock",
+      "spinal-cord-injury",
+      "autonomic-dysreflexia",
+      "differentiation",
+      "C5-injury",
+      "atropine",
+      "hypotension-bradycardia"
+    ]
+  },
+  {
+    "id": 119,
+    "type": "standard",
+    "difficulty": "HARD",
+    "category": "Management of Care",
+    "stem": "The nurse is receiving the hand-off report for four clients on a medical-surgical unit. Which client should the nurse assess first?",
+    "options": [
+      "A client who is 2 hours post-bronchoscopy and has an absent gag reflex.",
+      "A client who is 4 hours post-thoracentesis and reports pain at the puncture site when taking a deep breath.",
+      "A client who is 1 hour post-percutaneous liver biopsy whose heart rate has increased from 82 bpm to 118 bpm.",
+      "A client who is 3 hours post-esophagogastroduodenoscopy (EGD) and reports a sore throat and hoarseness."
+    ],
+    "correctAnswer": "A client who is 1 hour post-percutaneous liver biopsy whose heart rate has increased from 82 bpm to 118 bpm.",
+    "rationale": "The liver is a highly vascular organ containing approximately 25% of cardiac output. The most significant life-threatening complication following a percutaneous liver biopsy is internal hemorrhage into the peritoneal cavity. An increasing heart rate from 82 to 118 bpm is the earliest compensatory sign of hypovolemic shock — the body increases heart rate to maintain cardiac output as blood volume falls. This client requires immediate assessment of vital signs, puncture site, abdominal girth, and pain level. An absent gag reflex 2 hours after bronchoscopy is an expected finding because topical anesthetics are sprayed on the vocal cords — the client simply remains NPO until the reflex returns. Mild localized pain at the puncture site during deep breathing is an expected finding after thoracentesis — a needle was inserted through the pleural space, causing minor pleural irritation. Sudden severe dyspnea or asymmetrical chest expansion would indicate pneumothorax and would be a priority. A sore throat and hoarseness are expected minor side effects after an endoscope is passed through the oropharynx and esophagus during EGD.",
+    "trapBreakdown": "The trap is Option A (absent gag reflex post-bronchoscopy). Students see 'absent gag reflex' and immediately think airway emergency and aspiration risk. In the context of a post-bronchoscopy patient, this is completely expected and anticipated — the procedural consent and nursing care plan account for it. Context is everything on the NCLEX. The tachycardia in Option C is an unexpected acute change from a known baseline, signaling the body's compensatory response to hemorrhage.",
+    "trapTags": [
+      "priority-setting",
+      "liver-biopsy",
+      "hemorrhage",
+      "tachycardia-earliest-sign",
+      "post-procedure",
+      "gag-reflex-expected"
+    ]
+  },
+  {
+    "id": 120,
+    "type": "standard",
+    "difficulty": "HARD",
+    "category": "Reduction of Risk Potential",
+    "stem": "A client is 12 hours postoperative following a surgical tracheostomy. While the nurse is performing an assessment, the client coughs violently, and the tracheostomy tube is completely dislodged and falls onto the client's chest. The client is gasping for air and their oxygen saturation is dropping rapidly. What is the nurse's first action?",
+    "options": [
+      "Attempt to blindly reinsert the tracheostomy tube into the stoma.",
+      "Cover the stoma with a sterile occlusive dressing and ventilate the client using a bag-valve-mask over the nose and mouth.",
+      "Use a sterile hemostat to spread the stoma open and call for immediate assistance.",
+      "Administer 100% oxygen via a non-rebreather mask placed directly over the stoma."
+    ],
+    "correctAnswer": "Use a sterile hemostat to spread the stoma open and call for immediate assistance.",
+    "rationale": "Tracheostomy dislodgement within the first 72 hours of surgery is a critical airway emergency because the stoma tract has not yet matured — it will rapidly collapse closed, sealing the airway. The absolute first action is to secure the airway by using a sterile hemostat (or retention sutures if present at the stoma edges) to physically spread the stoma open and maintain a patent airway while simultaneously calling for emergency assistance to have the provider reinsert the tube or emergently re-intubate. Blindly reinserting the tube into an immature, collapsing tract is highly dangerous — the tube will likely be pushed into subcutaneous tissue creating a false passage that completely occludes the airway. Covering the stoma and ventilating via nose and mouth is only appropriate if the upper airway is intact and the stoma cannot be maintained — the immediate priority is always to preserve the surgical airway. Placing an oxygen mask over a collapsed, closed stoma delivers no oxygen to the lungs — the stoma must be physically opened first before any oxygen delivery attempt.",
+    "trapBreakdown": "The trap is Option A (reinsert the tube). Students correctly learn that for a mature tracheostomy (typically more than 72 hours to one week old), the nurse should immediately reinsert a replacement tube of the same or smaller size. The NCLEX tests the critical time distinction: less than 72 hours = immature tract = reinsertion by a nurse risks creating a fatal false passage. The hemostat or retention sutures exist precisely for this emergency in the early postoperative period.",
+    "trapTags": [
+      "tracheostomy",
+      "dislodgement",
+      "immature-tract",
+      "72-hour-rule",
+      "hemostat",
+      "false-passage",
+      "airway-emergency"
+    ]
+  },
+  {
+    "id": 121,
+    "type": "standard",
+    "difficulty": "HARD",
+    "category": "Management of Care",
+    "stem": "The nurse receives the morning hand-off report for four clients on a medical-surgical unit. Which client should the nurse assess first?",
+    "options": [
+      "A client with an acute exacerbation of COPD who has an oxygen saturation of 89% on 2 liters of oxygen via nasal cannula.",
+      "A client who is 2 days postoperative following a laparoscopic appendectomy and has a white blood cell (WBC) count of 11,500/mm³.",
+      "A client with acute pancreatitis who reports sudden, severe cramping and spasms in their hands and fingers.",
+      "A client with chronic heart failure who reports a 3-pound (1.4 kg) weight gain over the last 48 hours and has 2+ pitting edema."
+    ],
+    "correctAnswer": "A client with acute pancreatitis who reports sudden, severe cramping and spasms in their hands and fingers.",
+    "rationale": "Severe cramping and spasms in the hands and fingers (carpopedal spasm / Trousseau's sign) indicates severe hypocalcemia. In acute pancreatitis, fat necrosis binds and depletes serum calcium rapidly. Hypocalcemia can quickly progress to laryngospasm, tetany, and total airway obstruction — a life-threatening ABC emergency requiring immediate IV calcium gluconate. An SpO2 of 89% on 2L O2 is the expected, acceptable baseline target for severe COPD (88–92%) due to hypoxic drive — not an acute emergency. A WBC of 11,500/mm³ is mildly elevated but a normal, expected inflammatory response 48 hours after surgery. A 3-pound weight gain indicates worsening fluid retention requiring a diuretic, but is not an immediate life-threat compared to impending airway obstruction.",
+    "trapBreakdown": "The trap is Option D (3-pound weight gain in heart failure). Students are drilled that greater than 2 lbs per day in heart failure is a red flag. While true, in prioritization you must compare the speed of death: tetany from hypocalcemia causes airway obstruction in minutes; fluid retention in heart failure takes hours to days to become fatal. Airway always wins.",
+    "trapTags": [
+      "priority-setting",
+      "hypocalcemia",
+      "pancreatitis",
+      "Trousseau's-sign",
+      "airway",
+      "COPD-baseline-spo2"
+    ]
+  },
+  {
+    "id": 122,
+    "type": "standard",
+    "difficulty": "HARD",
+    "category": "Management of Care",
+    "stem": "A healthcare provider is preparing to obtain informed consent for a complex, high-risk surgical procedure from a client who speaks only Vietnamese. The provider asks the client's 16-year-old bilingual child to translate the risks, benefits, and alternatives of the surgery to the client. Which action by the nurse demonstrates adherence to health equity and legal consent standards?",
+    "options": [
+      "Document in the medical record that the client's child successfully translated the informed consent.",
+      "Intervene and inform the provider that a professional, facility-approved medical interpreter must be used.",
+      "Allow the child to translate, but ensure a bilingual nursing staff member is present to verify accuracy.",
+      "Provide the client with a written consent form in English and ask the child to read it aloud in Vietnamese."
+    ],
+    "correctAnswer": "Intervene and inform the provider that a professional, facility-approved medical interpreter must be used.",
+    "rationale": "Title VI of the Civil Rights Act and health equity standards strictly prohibit using family members — especially minors — to translate complex medical information for informed consent. Family members lack medical vocabulary, may filter or alter information to protect the patient emotionally, and cannot be held to professional accuracy standards. The nurse must advocate for the client and obtain a certified professional medical interpreter. Documenting an illegal consent process makes the nurse complicit in the violation. A bilingual staff member cannot substitute for a certified medical interpreter for complex surgical informed consent. Translating a legal document verbally on the fly is prone to critical errors and does not meet legal informed consent standards.",
+    "trapBreakdown": "The trap is thinking that because the child is bilingual and present, they are an acceptable solution. No family member — regardless of age, fluency, or good intentions — may legally serve as a medical interpreter for informed consent. The NCLEX rule is absolute: only a certified professional interpreter meets the legal standard.",
+    "trapTags": [
+      "health-equity",
+      "informed-consent",
+      "medical-interpreter",
+      "Title-VI",
+      "advocacy",
+      "minor-translator"
+    ]
+  },
+  {
+    "id": 123,
+    "type": "bowtie",
+    "difficulty": "HARD",
+    "category": "Physiological Adaptation",
+    "stem": "A 34-year-old client is brought to the emergency department by their spouse. The spouse reports the client had a severe respiratory infection three days ago and suddenly became extremely confused and agitated this morning. Medical History: Graves' disease (medication non-compliant for 2 months). Vital Signs: BP 180/100 mm Hg, HR 165 bpm, RR 28 breaths/min, Temp 104.8°F (40.4°C). Assessment: The client is delirious, profusely diaphoretic, and experiencing severe vomiting and diarrhea.\n\nComplete the Bow-Tie by selecting the correct Condition, two Actions to Take, and two Parameters to Monitor.",
+    "centerOptions": [
+      "Thyroid Storm (Thyrotoxic Crisis)",
+      "Myxedema Coma",
+      "Malignant Hyperthermia"
+    ],
+    "actionOptions": [
+      "Administer intravenous propranolol",
+      "Administer intravenous levothyroxine",
+      "Apply cooling blankets and ice packs",
+      "Administer a warm tap water enema"
+    ],
+    "parameterOptions": [
+      "Cardiac rhythm via continuous ECG",
+      "Deep tendon reflexes",
+      "Hourly blood glucose",
+      "Core body temperature"
+    ],
+    "correctCenter": "Thyroid Storm (Thyrotoxic Crisis)",
+    "correctActions": [
+      "Administer intravenous propranolol",
+      "Apply cooling blankets and ice packs"
+    ],
+    "correctParameters": [
+      "Cardiac rhythm via continuous ECG",
+      "Core body temperature"
+    ],
+    "rationale": "The client has Graves' disease (hyperthyroidism) with a physiological stressor (infection) triggering a massive uncontrolled thyroid hormone surge — Thyroid Storm. Classic features: HR 165, BP 180/100, Temp 104.8°F, delirium, diaphoresis, severe GI distress. Myxedema coma is severe hypothyroidism (low temp, bradycardia, lethargy — the opposite). Malignant hyperthermia is triggered by inhaled anesthetics. IV Propranolol is the absolute first-line treatment — it blocks the massive sympathomimetic surge, rapidly reducing the fatal heart rate and blood pressure. Aggressive cooling with blankets and ice packs is required to prevent irreversible brain damage from extreme hyperthermia. Continuous ECG monitoring is critical because the client is at imminent risk for fatal tachyarrhythmias and high-output heart failure. Core body temperature monitoring tracks the effectiveness of cooling and prevents overshoot hypothermia.",
+    "trapBreakdown": "The trap is selecting levothyroxine as a treatment. Levothyroxine is thyroid hormone replacement — giving more thyroid hormone to a patient already in thyroid storm would be fatal. Treatment goal is to BLOCK and REDUCE thyroid hormone effects with propranolol (blocks sympathetic effects), PTU or methimazole (blocks synthesis), and iodine (blocks release). Never add fuel to the fire.",
+    "trapTags": [
+      "thyroid-storm",
+      "Graves-disease",
+      "bowtie",
+      "NGN",
+      "propranolol",
+      "hyperthermia",
+      "levothyroxine-trap"
+    ]
+  },
+  {
+    "id": 124,
+    "type": "standard",
+    "difficulty": "HARD",
+    "category": "Pharmacological and Parenteral Therapies",
+    "stem": "A client with Diabetic Ketoacidosis (DKA) is receiving a continuous intravenous infusion of regular insulin and 0.9% Normal Saline. The nurse performs a point-of-care (POC) capillary blood glucose test, which reveals the glucose level has dropped from 450 mg/dL to 220 mg/dL over the last two hours. The client is alert and oriented. What is the nurse's priority action?",
+    "options": [
+      "Stop the continuous regular insulin infusion immediately.",
+      "Administer a prescribed intravenous bolus of 50% Dextrose (D50).",
+      "Change the intravenous fluid to include 5% Dextrose (e.g., D5W or D5 0.45% NaCl).",
+      "Continue the current infusions and recheck the POC glucose in 1 hour."
+    ],
+    "correctAnswer": "Change the intravenous fluid to include 5% Dextrose (e.g., D5W or D5 0.45% NaCl).",
+    "rationale": "In DKA, the goal of the insulin drip is not only to lower glucose but to stop ketone production (ketogenesis), which causes the fatal acidosis. When glucose drops to 200–250 mg/dL, the acidosis is usually not yet resolved. Stopping the insulin will cause ketogenesis to immediately restart. The correct action is to add dextrose to the IV fluid so the insulin can continue clearing ketones safely without driving glucose into hypoglycemic shock. Stopping the insulin is a critical error — ketoacidosis will restart within hours. D50 is a rescue drug for severe symptomatic hypoglycemia (glucose below 50 mg/dL) — a glucose of 220 does not require rescue bolus therapy. Continuing without adding dextrose will rapidly drive glucose dangerously low, risking hypoglycemic shock and cerebral edema.",
+    "trapBreakdown": "The trap is Option A (stop the insulin). Students see a glucose of 220 — nearly normal — and think the insulin drip is no longer needed. This misses the fundamental pathophysiology: DKA is an acidosis crisis, not just a glucose crisis. The insulin must run until the anion gap closes and ketones clear. The fix is to add dextrose so the insulin can keep working safely.",
+    "trapTags": [
+      "DKA",
+      "insulin-drip",
+      "dextrose",
+      "point-of-care-testing",
+      "ketogenesis",
+      "acidosis",
+      "stop-insulin-trap"
+    ]
+  },
+  {
+    "id": 125,
+    "type": "sata",
+    "difficulty": "HARD",
+    "category": "Pharmacological and Parenteral Therapies",
+    "stem": "A client is admitted to the cardiac intensive care unit with acute decompensated heart failure (systolic dysfunction with an ejection fraction of 25%). The nurse is reviewing the admission prescriptions from the healthcare provider. Which prescriptions should the nurse question? Select all that apply.",
+    "options": [
+      "Administer intravenous furosemide 40 mg push now.",
+      "Initiate a continuous intravenous infusion of 0.9% Normal Saline at 125 mL/hr.",
+      "Administer oral ibuprofen 400 mg every 6 hours PRN for headache.",
+      "Administer a continuous intravenous infusion of diltiazem.",
+      "Administer oral potassium chloride 20 mEq daily."
+    ],
+    "correctAnswer": "Initiate a continuous intravenous infusion of 0.9% Normal Saline at 125 mL/hr., Administer oral ibuprofen 400 mg every 6 hours PRN for headache., Administer a continuous intravenous infusion of diltiazem.",
+    "rationale": "Normal Saline at 125 mL/hr should be questioned — aggressively adding isotonic fluid to a client with decompensated heart failure rapidly worsens fluid overload and pulmonary edema. Fluid restriction is required, not volume loading. Ibuprofen (NSAID) should be questioned — NSAIDs cause sodium and water retention, directly worsening heart failure and are absolutely contraindicated. Diltiazem should be questioned — it is a non-dihydropyridine calcium channel blocker with strong negative inotropic effects (reduces the force of cardiac contraction). In a client with severe systolic dysfunction (EF 25%), diltiazem can precipitate cardiovascular collapse. IV furosemide should NOT be questioned — it is the gold-standard first-line treatment to rapidly remove excess fluid in acute decompensated heart failure. Oral potassium chloride should NOT be questioned — furosemide wastes potassium, making supplementation necessary to prevent fatal dysrhythmias.",
+    "trapBreakdown": "The trap is questioning the furosemide or potassium. Students sometimes flag furosemide as too aggressive or worry the potassium will cause hyperkalemia. In acute decompensated heart failure, IV furosemide is the single most important immediate intervention. The potassium supplement is a direct, expected consequence of giving furosemide. Both are correct, necessary orders.",
+    "trapTags": [
+      "heart-failure",
+      "SATA",
+      "diltiazem-negative-inotrope",
+      "NSAIDs-contraindicated",
+      "furosemide",
+      "question-the-order",
+      "EF-25"
+    ]
+  },
+  {
+    "id": 126,
+    "type": "matrix",
+    "difficulty": "HARD",
+    "category": "Physiological Adaptation",
+    "stem": "The nurse is reviewing electrocardiogram (ECG) strips for four different clients in the intensive care unit. Match each electrolyte imbalance to its classic hallmark ECG manifestation.",
+    "rows": [
+      "Severe Hyperkalemia (Potassium 7.2 mEq/L)",
+      "Severe Hypokalemia (Potassium 2.4 mEq/L)",
+      "Severe Hypocalcemia (Calcium 6.5 mg/dL)"
+    ],
+    "columns": [
+      "Prominent U waves and ST-segment depression.",
+      "Prolonged QT interval.",
+      "Tall, peaked T waves and a widened QRS complex."
+    ],
+    "correctAnswer": {
+      "Severe Hyperkalemia (Potassium 7.2 mEq/L)": "Tall, peaked T waves and a widened QRS complex.",
+      "Severe Hypokalemia (Potassium 2.4 mEq/L)": "Prominent U waves and ST-segment depression.",
+      "Severe Hypocalcemia (Calcium 6.5 mg/dL)": "Prolonged QT interval."
+    },
+    "rationale": "Severe Hyperkalemia produces tall, peaked T waves (accelerated repolarization) and a widened QRS complex (slowed ventricular depolarization). As potassium rises further, waveforms merge into a sine wave, progressing to ventricular fibrillation or asystole. Severe Hypokalemia produces prominent U waves (a small positive deflection after the T wave representing delayed repolarization) and ST-segment depression. A U wave taller than the T wave is a classic hypokalemia sign. Severe Hypocalcemia prolongs the QT interval by extending the plateau phase of ventricular action potentials. A prolonged QT interval creates the substrate for Torsades de Pointes — a potentially fatal polymorphic ventricular tachycardia.",
+    "trapBreakdown": "The most common confusion is between hypokalemia and hypocalcemia ECG changes. Both affect ventricular repolarization but with distinct signatures: hypokalemia causes U waves and ST depression; hypocalcemia specifically prolongs the QT interval without prominent U waves. Memory aid: K-low equals U waves; Ca-low equals Long QT.",
+    "trapTags": [
+      "ECG",
+      "electrolytes",
+      "matrix",
+      "NGN",
+      "hyperkalemia",
+      "hypokalemia",
+      "hypocalcemia",
+      "QT-interval",
+      "U-waves",
+      "peaked-T-waves"
+    ]
+  },
+  {
+    "id": 127,
+    "type": "standard",
+    "difficulty": "HARD",
+    "category": "Psychosocial Integrity",
+    "stem": "A client with a documented history of severe opioid substance misuse is currently enrolled in a methadone maintenance program, taking 80 mg of oral methadone daily. The client is admitted to the surgical unit following an open reduction and internal fixation (ORIF) of a shattered femur. The client is crying and reports their pain is a 10/10. Which approach to pain management is most appropriate for this client?",
+    "options": [
+      "Withhold all opioid analgesics to prevent triggering a relapse of the client's substance misuse disorder.",
+      "Administer the client's baseline daily methadone dose and provide non-opioid analgesics (e.g., ketorolac, acetaminophen) for the surgical pain.",
+      "Temporarily discontinue the methadone and replace it with a continuous intravenous morphine infusion.",
+      "Administer the client's baseline daily methadone dose and provide prescribed short-acting opioid analgesics for the surgical pain."
+    ],
+    "correctAnswer": "Administer the client's baseline daily methadone dose and provide prescribed short-acting opioid analgesics for the surgical pain.",
+    "rationale": "Clients on methadone maintenance therapy have high opioid tolerance. Their daily methadone dose prevents withdrawal and cravings but does NOT provide adequate acute pain relief for major trauma or surgery. The standard of care is to maintain the baseline methadone dose to prevent withdrawal AND treat the acute surgical pain aggressively with short-acting opioids such as morphine or oxycodone, often requiring higher-than-normal doses due to opioid tolerance. Withholding all opioids for a shattered femur is unethical, inhumane, and violates the client's right to adequate pain management. Untreated severe pain is itself a powerful relapse trigger. Non-opioid analgesics alone are completely insufficient for the severe, acute pain of major orthopedic trauma. Discontinuing methadone will cause severe opioid withdrawal within 24–48 hours, severely complicating surgical recovery.",
+    "trapBreakdown": "The trap is Option B (non-opioids only). Students hyperaware of the opioid epidemic fear giving opioids to a patient with addiction history is a medical error. The NCLEX tests the ability to distinguish chronic addiction management from acute, legitimate pain management. A shattered femur requiring ORIF demands opioid analgesia regardless of substance misuse history. Withholding it is the actual error.",
+    "trapTags": [
+      "substance-misuse",
+      "opioid-tolerance",
+      "methadone",
+      "acute-pain",
+      "ORIF",
+      "pain-management",
+      "stigma-trap"
+    ]
+  },
+  {
+    "id": 128,
+    "type": "standard",
+    "difficulty": "HARD",
+    "category": "Management of Care",
+    "stem": "The registered nurse (RN) is working with a licensed practical nurse (LPN) and an unlicensed assistive personnel (UAP) on a medical-surgical unit. Which client assignment is most appropriate for the RN to delegate to the LPN?",
+    "options": [
+      "A client admitted 1 hour ago with acute chest pain who requires a 12-lead ECG and sublingual nitroglycerin.",
+      "A client with a chronic tracheostomy who requires scheduled enteral tube feedings via a percutaneous endoscopic gastrostomy (PEG) tube.",
+      "A client receiving a continuous intravenous heparin infusion for a deep vein thrombosis who requires a rate adjustment based on recent lab results.",
+      "A client newly diagnosed with type 1 diabetes mellitus who requires discharge teaching on how to draw up and mix insulins."
+    ],
+    "correctAnswer": "A client with a chronic tracheostomy who requires scheduled enteral tube feedings via a percutaneous endoscopic gastrostomy (PEG) tube.",
+    "rationale": "The LPN scope of practice includes caring for stable clients with chronic, predictable conditions. Administering scheduled enteral tube feedings via a PEG tube and providing routine care for a chronic tracheostomy are within safe LPN practice. A client admitted 1 hour ago with acute chest pain is highly unstable — requiring the advanced assessment, triage, and critical thinking of the RN. Managing and titrating high-alert continuous IV medications such as a heparin drip is strictly within the RN scope of practice — rate adjustments based on lab values require clinical judgment the RN alone possesses. Initiating complex discharge teaching for a newly diagnosed diabetic — including assessing learning needs, developing a teaching plan, and evaluating understanding — is an RN function. An LPN may reinforce established teaching but cannot initiate it.",
+    "trapBreakdown": "The trap is Option D (diabetic discharge teaching). Students reason that teaching is a common nursing task that LPNs perform. The critical distinction is NEW versus established teaching. Developing and initiating a complex teaching plan for a new diagnosis requires nursing assessment and judgment — RN only. An LPN can reinforce what has already been taught, but cannot initiate the education plan.",
+    "trapTags": [
+      "delegation",
+      "LPN-scope",
+      "RN-scope",
+      "chronic-vs-acute",
+      "heparin-titration",
+      "discharge-teaching",
+      "tracheostomy"
+    ]
+  },
+  {
+    "id": 129,
+    "type": "standard",
+    "difficulty": "HARD",
+    "category": "Management of Care",
+    "stem": "A client at 39 weeks gestation is in active labor. The client's membranes spontaneously rupture, and a large gush of clear fluid is noted. Immediately following the rupture, the fetal heart rate drops to 70 bpm and remains there. The nurse performs a sterile vaginal examination and feels a soft, pulsating mass in the vaginal canal. What is the nurse's priority action?",
+    "options": [
+      "Remove the examining hand, place the client in a knee-chest position, and call for help.",
+      "Keep the examining hand in the vagina, apply upward pressure on the presenting part, and call for help.",
+      "Attempt to gently push the pulsating mass back through the cervix into the uterus.",
+      "Administer oxygen at 10 L/min via a non-rebreather mask and prepare for an amnioinfusion."
+    ],
+    "correctAnswer": "Keep the examining hand in the vagina, apply upward pressure on the presenting part, and call for help.",
+    "rationale": "The client has a prolapsed umbilical cord — a catastrophic obstetrical emergency. The fetal head is compressing the prolapsed cord against the pelvis, cutting off fetal oxygenation and causing the severe bradycardia of 70 bpm. The nurse must keep their sterile gloved hand in the vagina and physically push the fetal presenting part upward off the cord to restore blood flow. The nurse's hand remains in this position continuously while the team prepares for emergency cesarean section. Removing the examining hand allows the fetal head to fall back onto the cord, immediately re-compressing it and causing fetal asphyxia — the nurse's hand must never be removed until the baby is delivered. Other staff reposition the client while the nurse's hand stays inside. Attempting to push the cord back into the uterus is strictly contraindicated — handling the cord causes vasospasm of the umbilical arteries, completely cutting off blood flow to the fetus. Oxygen is appropriate but useless as a first action when the cord is mechanically compressed — no oxygenated blood can reach the fetus until the compression is relieved.",
+    "trapBreakdown": "The trap is Option A (remove hand, knee-chest position). Students know that knee-chest and Trendelenburg positioning help relieve cord compression and instinctively want to reposition the client first. However, the nurse must never remove their hand once they have elevated the presenting part — removing it re-compresses the cord. Other staff reposition the client while the nurse's hand stays in place. The hand is the baby's only lifeline until delivery.",
+    "trapTags": [
+      "cord-prolapse",
+      "obstetrics",
+      "fetal-bradycardia",
+      "upward-pressure",
+      "emergency-cesarean",
+      "hand-in-place"
+    ]
+  },
+  {
+    "id": 130,
+    "type": "standard",
+    "difficulty": "HARD",
+    "category": "Pharmacological and Parenteral Therapies",
+    "stem": "A client with severe, chronic asthma is prescribed oral theophylline. During a routine clinic visit, the nurse reviews the client's current medication list and recent health history. Which statement by the client requires immediate follow-up by the nurse?",
+    "options": [
+      "'I have been drinking about three cups of coffee every morning to help me wake up.'",
+      "'I started taking over-the-counter cimetidine a few days ago for my heartburn.'",
+      "'I make sure to take my theophylline pill at the exact same time every single day.'",
+      "'I have noticed that my hands shake a little bit about an hour after I take my pill.'"
+    ],
+    "correctAnswer": "'I started taking over-the-counter cimetidine a few days ago for my heartburn.'",
+    "rationale": "Theophylline has a very narrow therapeutic index (10–20 mcg/mL) and is highly prone to dangerous drug interactions. Cimetidine (an H2 receptor blocker) severely inhibits the cytochrome P450 liver enzymes responsible for metabolizing theophylline. Taking cimetidine with theophylline causes rapid drug accumulation to toxic levels, leading to intractable seizures and fatal cardiac dysrhythmias — the cimetidine must be stopped immediately. Three cups of coffee daily is concerning because theophylline is chemically related to caffeine and can worsen side effects like tachycardia, but is not as immediately life-threatening as the cimetidine interaction. Taking the medication at the exact same time daily is the correct, desired behavior for maintaining stable serum drug levels. Mild hand tremors appearing shortly after the dose are a common, expected side effect of theophylline — similar to caffeine jitters. Severe new-onset tremors or seizures would indicate toxicity.",
+    "trapBreakdown": "The trap is Option D (hands shaking). Students associate tremors with neurological toxicity and flag them as dangerous. For theophylline, mild tremors shortly after dosing are a known, expected baseline side effect — not a toxicity sign. The cimetidine interaction is the classic high-yield NCLEX pharmacology trap: a seemingly harmless OTC heartburn medication causing a life-threatening drug interaction with a narrow-therapeutic-index drug.",
+    "trapTags": [
+      "theophylline",
+      "narrow-therapeutic-index",
+      "cimetidine",
+      "drug-interaction",
+      "cytochrome-P450",
+      "theophylline-toxicity",
+      "OTC-trap"
+    ]
+  },
+  {
+    "id": 131,
+    "type": "standard",
+    "difficulty": "HARD",
+    "category": "Management of Care",
+    "stem": "The nurse is receiving the hand-off report for four clients on a step-down telemetry unit. Which client should the nurse assess first?",
+    "options": [
+      "A client with a history of heart failure who is coughing up copious amounts of pink, frothy sputum and is restless.",
+      "A client with a deep vein thrombosis (DVT) on a continuous heparin infusion who has an activated partial thromboplastin time (aPTT) of 95 seconds.",
+      "A client who is 1 day postoperative following a permanent pacemaker insertion who reports mild pain and bruising at the insertion site.",
+      "A client with chronic obstructive pulmonary disease (COPD) who has a barrel chest, clubbed fingers, and an oxygen saturation of 89% on room air."
+    ],
+    "correctAnswer": "A client with a history of heart failure who is coughing up copious amounts of pink, frothy sputum and is restless.",
+    "rationale": "Pink, frothy sputum combined with restlessness (an early sign of hypoxia) is the hallmark presentation of acute pulmonary edema — a life-threatening complication of left-sided heart failure. Fluid is rapidly filling the alveoli, causing severe impaired gas exchange. This is an immediate ABC (Airway/Breathing) emergency requiring oxygen, diuretics such as furosemide, and potentially positive pressure ventilation such as BiPAP or intubation. An aPTT of 95 seconds is supratherapeutic (therapeutic range typically 40–80 seconds) and requires pausing or decreasing the heparin drip to prevent bleeding, but the client is not actively in respiratory distress. Mild pain and bruising at a pacemaker insertion site on postoperative day 1 are expected, normal findings. A barrel chest, clubbed fingers, and SpO2 of 89% are chronic, expected baseline findings for a client with severe COPD.",
+    "trapBreakdown": "The trap is Option B (aPTT of 95 seconds). Students are trained to spot abnormal lab values and immediately want to fix them. While an aPTT of 95 requires intervention, the NCLEX prioritization rule dictates that an actual, active ABC threat (acute pulmonary edema with pink frothy sputum) always supersedes a potential threat (elevated bleeding risk). Actual problems beat potential problems every time.",
+    "trapTags": [
+      "priority-setting",
+      "pulmonary-edema",
+      "pink-frothy-sputum",
+      "aPTT-supratherapeutic",
+      "COPD-baseline",
+      "actual-vs-potential"
+    ]
+  },
+  {
+    "id": 132,
+    "type": "standard",
+    "difficulty": "HARD",
+    "category": "Psychosocial Integrity",
+    "stem": "A client with a documented history of severe opioid substance misuse is admitted to the trauma unit with deep partial-thickness burns covering 25% of their body. The client is currently enrolled in an outpatient buprenorphine/naloxone (Suboxone) program. The client is crying, tachycardic, and rates their pain as a 10/10. Which action by the nurse demonstrates adherence to health equity and evidence-based pain management standards?",
+    "options": [
+      "Withhold opioid analgesics and administer intravenous ketorolac to prevent triggering a relapse of the client's substance misuse disorder.",
+      "Request a psychiatric consult to evaluate the client for drug-seeking behavior before administering any narcotic pain medications.",
+      "Advocate for the administration of full-agonist opioid analgesics (e.g., fentanyl or morphine) at higher-than-standard doses to manage the acute pain.",
+      "Administer a placebo injection of normal saline to determine if the client's pain is physiological or psychological."
+    ],
+    "correctAnswer": "Advocate for the administration of full-agonist opioid analgesics (e.g., fentanyl or morphine) at higher-than-standard doses to manage the acute pain.",
+    "rationale": "Clients with a history of opioid substance misuse have a fundamental right to equitable, effective pain management. Because they have a high baseline opioid tolerance, standard doses are ineffective. Furthermore, buprenorphine is a partial agonist with very high receptor affinity that blocks standard opioids. Overcoming this blockade to treat severe acute trauma pain such as 25% body burns requires higher-than-standard doses of high-potency, full-agonist opioids like fentanyl. Withholding appropriate analgesia for severe burns is unethical and violates the client's rights — untreated severe pain is itself a massive relapse trigger. Requesting a psychiatric consult before treating pain demonstrates severe implicit bias and stigma against clients with substance use disorders. Administering a placebo is highly unethical, destroys nurse-client trust, and constitutes professional misconduct.",
+    "trapBreakdown": "The trap is Option A (withhold opioids, give ketorolac). Students hyperaware of the opioid epidemic fear giving opioids to a patient with addiction history is a medical error. The NCLEX and evidence-based practice are unambiguous: clients with substance use disorders have equal rights to effective pain management. For severe burn pain in a buprenorphine patient, ketorolac alone is grossly inadequate and withholding opioids is the actual ethical violation.",
+    "trapTags": [
+      "substance-misuse",
+      "buprenorphine",
+      "opioid-tolerance",
+      "burn-pain",
+      "health-equity",
+      "placebo-unethical",
+      "drug-seeking-bias"
+    ]
+  },
+  {
+    "id": 133,
+    "type": "bowtie",
+    "difficulty": "HARD",
+    "category": "Physiological Adaptation",
+    "stem": "A 65-year-old client is admitted to the intensive care unit with severe sepsis secondary to a urinary tract infection. Over the last 4 hours, the client has become increasingly restless and tachypneic. Vital Signs: BP 90/50 mm Hg, HR 128 bpm, RR 36 breaths/min. Assessment: The pulse oximeter reads 82% despite the client receiving 100% oxygen via a non-rebreather mask. Auscultation reveals diffuse crackles bilaterally. Diagnostics: A stat chest X-ray shows bilateral diffuse 'whiteout' infiltrates. ABG reveals a PaO2 of 48 mm Hg.\n\nComplete the Bow-Tie by selecting the correct Condition, two Actions to Take, and two Parameters to Monitor.",
+    "centerOptions": [
+      "Acute Respiratory Distress Syndrome (ARDS)",
+      "Cardiogenic Pulmonary Edema",
+      "Tension Pneumothorax"
+    ],
+    "actionOptions": [
+      "Prepare for immediate endotracheal intubation and mechanical ventilation",
+      "Administer a rapid 2-liter intravenous fluid bolus",
+      "Implement prone positioning",
+      "Administer intravenous furosemide"
+    ],
+    "parameterOptions": [
+      "PaO2/FiO2 (P/F) ratio",
+      "Daily weights",
+      "Tracheal deviation",
+      "End-tidal CO2 (capnography)"
+    ],
+    "correctCenter": "Acute Respiratory Distress Syndrome (ARDS)",
+    "correctActions": [
+      "Prepare for immediate endotracheal intubation and mechanical ventilation",
+      "Implement prone positioning"
+    ],
+    "correctParameters": [
+      "PaO2/FiO2 (P/F) ratio",
+      "End-tidal CO2 (capnography)"
+    ],
+    "rationale": "The client has a systemic inflammatory trigger (sepsis) causing massive alveolar capillary leakage — the hallmark of ARDS. The defining sign is refractory hypoxemia: SpO2 82% and PaO2 48 mm Hg remain critically low despite 100% oxygen, along with bilateral whiteout infiltrates on chest X-ray. Cardiogenic pulmonary edema is caused by heart failure, not sepsis. Tension pneumothorax presents with unilateral absent breath sounds and tracheal deviation. Immediate endotracheal intubation with mechanical ventilation and PEEP is required to force fluid-filled alveoli open and allow gas exchange — no amount of face mask oxygen will work when alveoli are collapsed and flooded. Prone positioning shifts blood flow to the less-damaged anterior lung portions, significantly improving oxygenation in ARDS and is a standard evidence-based intervention. The PaO2/FiO2 ratio is the primary diagnostic and monitoring tool for ARDS severity — a ratio below 200 indicates moderate to severe ARDS. End-tidal CO2 monitoring via capnography is essential for mechanically ventilated clients to ensure adequate ventilation, tube placement, and CO2 clearance.",
+    "trapBreakdown": "The trap is selecting the 2-liter IV fluid bolus. Students see hypotension (BP 90/50) and tachycardia and instinctively want to give fluids for septic shock. In ARDS, the alveolar capillaries are already leaking fluid into the lungs — adding 2 liters more will worsen the pulmonary flooding and accelerate respiratory failure. Mechanical ventilation with PEEP is required to support oxygenation while sepsis management proceeds conservatively with fluid.",
+    "trapTags": [
+      "ARDS",
+      "bowtie",
+      "NGN",
+      "refractory-hypoxemia",
+      "PEEP",
+      "prone-positioning",
+      "P/F-ratio",
+      "fluid-trap"
+    ]
+  },
+  {
+    "id": 134,
+    "type": "standard",
+    "difficulty": "HARD",
+    "category": "Pharmacological and Parenteral Therapies",
+    "stem": "The nurse is caring for a client receiving a continuous intravenous heparin infusion for a pulmonary embolism. The client has a nasogastric (NG) tube in place for decompression. During the shift, the nurse aspirates 50 mL of 'coffee-ground' material from the NG tube. The nurse performs a point-of-care (POC) gastric occult blood test, which turns blue, indicating a positive result for blood. The client's vital signs are BP 110/70 mm Hg and HR 88 bpm. What is the nurse's priority action?",
+    "options": [
+      "Document the finding as expected due to the mechanical irritation of the NG tube.",
+      "Stop the continuous intravenous heparin infusion immediately.",
+      "Administer a prescribed PRN dose of intravenous protamine sulfate.",
+      "Flush the NG tube with 30 mL of iced normal saline to cause vasoconstriction."
+    ],
+    "correctAnswer": "Stop the continuous intravenous heparin infusion immediately.",
+    "rationale": "Coffee-ground aspirate from an NG tube indicates upper gastrointestinal bleeding — the blood has been partially digested by gastric acid. A positive POC occult blood test confirms active bleeding. Because the client is on a continuous high-alert anticoagulant (heparin), the absolute first priority is to stop the infusion immediately to prevent fatal hemorrhage progression. While vitals are currently stable, the client is fully anticoagulated and the bleeding will worsen rapidly if the heparin continues. Coffee-ground aspirate that is positive for blood in a fully anticoagulated client is never an expected or acceptable finding — it is a medical emergency. Protamine sulfate is the specific antidote for heparin but requires a provider prescription based on bleeding severity and most recent aPTT level — stopping the infusion is the independent nursing priority that must happen first. Iced saline lavage is an outdated, non-evidence-based practice that can cause mucosal damage and hypothermia and is no longer recommended.",
+    "trapBreakdown": "The trap is Option C (administer protamine sulfate). Students correctly recognize the bleeding and immediately look for the antidote. However, administering a reversal agent is a dependent nursing action requiring a provider order. The independent, immediate life-saving action is simply turning off the IV pump — this happens first, before contacting the provider for further orders including protamine if warranted.",
+    "trapTags": [
+      "heparin",
+      "GI-bleed",
+      "coffee-ground",
+      "stop-infusion",
+      "protamine-sulfate",
+      "point-of-care-testing",
+      "dependent-vs-independent-action"
+    ]
+  },
+  {
+    "id": 135,
+    "type": "sata",
+    "difficulty": "HARD",
+    "category": "Safety and Infection Prevention and Control",
+    "stem": "A client is admitted to the medical unit with severe, watery diarrhea and abdominal cramping. A stool sample confirms a Clostridioides difficile (C. diff) infection. Which infection control interventions must the nurse implement? Select all that apply.",
+    "options": [
+      "Place the client in a private room with negative-pressure airflow.",
+      "Don a disposable gown and clean gloves immediately upon entering the client's room.",
+      "Perform hand hygiene using an alcohol-based hand rub after removing gloves.",
+      "Clean the client's room and dedicated medical equipment with a bleach-based disinfectant.",
+      "Instruct visitors to wear an N95 respirator mask while inside the room."
+    ],
+    "correctAnswer": "Don a disposable gown and clean gloves immediately upon entering the client's room., Clean the client's room and dedicated medical equipment with a bleach-based disinfectant.",
+    "rationale": "C. diff requires strict Contact Precautions. A gown and gloves must be donned upon entering the room to prevent transfer of spores to the nurse's clothing and hands — spores can survive on surfaces for months. C. diff spores are highly resilient and are not killed by standard hospital disinfectants or alcohol-based products. All surfaces and equipment must be cleaned with a sporicidal agent — specifically a bleach-based (sodium hypochlorite) solution. Negative-pressure airflow is required for Airborne Precautions such as tuberculosis and measles — C. diff is transmitted via the fecal-oral route (contact), not through the air. Alcohol-based hand rubs do not kill C. diff spores — this is a critical safety violation. The nurse must use soap and water to physically wash spores off the hands and down the drain. An N95 respirator is for Airborne Precautions only — a standard surgical mask is only needed if splashing of bodily fluids is anticipated and is not routinely required for C. diff.",
+    "trapBreakdown": "The trap is Option C (alcohol-based hand rub). Alcohol hand sanitizer is the standard of care for virtually every other hospital interaction, and students select it automatically from habit. C. diff is the major and highest-yield NCLEX exception: alcohol does not kill spores. Soap and water are absolutely mandatory for hand hygiene after caring for a C. diff patient. This is one of the most commonly missed infection control questions on the NCLEX.",
+    "trapTags": [
+      "C-diff",
+      "contact-precautions",
+      "SATA",
+      "alcohol-hand-rub-ineffective",
+      "soap-and-water",
+      "bleach-disinfectant",
+      "spores"
+    ]
+  },
+  {
+    "id": 136,
+    "type": "matrix",
+    "difficulty": "HARD",
+    "category": "Pharmacological and Parenteral Therapies",
+    "stem": "The emergency department nurse is caring for multiple clients experiencing acute medication toxicities. Match each specific medication overdose to its correct pharmacological antidote.",
+    "rows": [
+      "Acetaminophen (Tylenol) overdose",
+      "Benzodiazepine (e.g., Diazepam) overdose",
+      "Warfarin (Coumadin) toxicity",
+      "Opioid (e.g., Heroin, Fentanyl) overdose"
+    ],
+    "columns": [
+      "Flumazenil",
+      "Acetylcysteine",
+      "Naloxone",
+      "Vitamin K (Phytonadione)"
+    ],
+    "correctAnswer": {
+      "Acetaminophen (Tylenol) overdose": "Acetylcysteine",
+      "Benzodiazepine (e.g., Diazepam) overdose": "Flumazenil",
+      "Warfarin (Coumadin) toxicity": "Vitamin K (Phytonadione)",
+      "Opioid (e.g., Heroin, Fentanyl) overdose": "Naloxone"
+    },
+    "rationale": "Acetaminophen overdose is treated with Acetylcysteine — it replenishes glutathione in the liver, preventing the toxic metabolite NAPQI from causing massive, fatal hepatic necrosis. Treatment must begin within 8–10 hours for maximum effectiveness. Benzodiazepine overdose is treated with Flumazenil — a competitive benzodiazepine receptor antagonist that reverses severe CNS and respiratory depression. Important caution: Flumazenil can precipitate life-threatening seizures in chronic benzodiazepine users due to physical dependence. Warfarin toxicity is treated with Vitamin K (Phytonadione) — warfarin works by blocking Vitamin K-dependent clotting factors (II, VII, IX, X), so administering Vitamin K directly reverses the anticoagulation effect. For severe life-threatening bleeding, fresh frozen plasma (FFP) or 4-factor PCC provides immediate factor replacement. Opioid overdose is treated with Naloxone (Narcan) — a pure opioid antagonist that rapidly displaces opioids from mu receptors, instantly reversing respiratory depression, sedation, and miosis.",
+    "trapBreakdown": "The most common confusion is between flumazenil and naloxone — students mix up the benzo and opioid antidotes. Memory aid: Flumazenil contains the letter 'z' like benzodiazepine. Naloxone contains 'nal' like opioid antagonist. The acetaminophen-acetylcysteine pairing is also frequently missed because students do not associate liver protection with a respiratory mucolytic (acetylcysteine is also used to thin mucus, but its antidote mechanism is hepatic glutathione replenishment).",
+    "trapTags": [
+      "antidotes",
+      "matrix",
+      "NGN",
+      "acetylcysteine",
+      "flumazenil",
+      "naloxone",
+      "vitamin-K",
+      "pharmacology",
+      "toxicology"
+    ]
+  },
+  {
+    "id": 137,
+    "type": "standard",
+    "difficulty": "HARD",
+    "category": "Management of Care",
+    "stem": "A client at 40 weeks gestation is in the second stage of labor, pushing. The fetal head delivers but immediately retracts tightly against the maternal perineum (the 'turtle sign'). The nurse recognizes this as a shoulder dystocia. What is the nurse's priority action?",
+    "options": [
+      "Apply firm, continuous fundal pressure to help push the fetus out.",
+      "Instruct the client to hyperflex their legs tightly against their abdomen and apply suprapubic pressure.",
+      "Prepare the client for an immediate emergency cesarean section.",
+      "Place the client in the Trendelenburg position and administer oxygen."
+    ],
+    "correctAnswer": "Instruct the client to hyperflex their legs tightly against their abdomen and apply suprapubic pressure.",
+    "rationale": "The turtle sign indicates shoulder dystocia — an obstetrical emergency where the fetal anterior shoulder is impacted behind the maternal symphysis pubis after head delivery. The first-line nursing interventions are the McRoberts maneuver (hyperflexing the maternal thighs tightly against the abdomen to flatten the lumbar lordosis and widen the pelvic outlet by rotating the symphysis pubis superiorly) and applying suprapubic pressure (pressing firmly directly above the pubic bone to dislodge the impacted anterior shoulder). Applying fundal pressure is strictly contraindicated — pressing on the top of the uterus drives the shoulder more tightly behind the pubic bone and dramatically increases the risk of uterine rupture and fetal brachial plexus injury. Emergency cesarean is not the immediate action because the fetal head is already delivered — delivery must be completed vaginally using obstetric maneuvers. The Trendelenburg position is used for umbilical cord prolapse, not shoulder dystocia.",
+    "trapBreakdown": "The trap is Option A (fundal pressure). It seems logical — if the baby is stuck, push from the top to get it out. The NCLEX consistently uses fundal pressure as a lethal distractor in shoulder dystocia questions. The critical distinction: suprapubic pressure (pressing ABOVE the pubic bone, downward and laterally to dislodge the shoulder) is correct; fundal pressure (pressing on top of the uterus) is catastrophically wrong.",
+    "trapTags": [
+      "shoulder-dystocia",
+      "turtle-sign",
+      "McRoberts-maneuver",
+      "suprapubic-pressure",
+      "fundal-pressure-contraindicated",
+      "obstetrics"
+    ]
+  },
+  {
+    "id": 138,
+    "type": "standard",
+    "difficulty": "HARD",
+    "category": "Physiological Adaptation",
+    "stem": "A 4-year-old child is brought to the emergency department by their parents. The child is sitting upright, leaning forward with their chin thrust out, and drooling profusely. The child has a temperature of 103.5°F (39.7°C) and is exhibiting inspiratory stridor. What is the nurse's priority action?",
+    "options": [
+      "Gently inspect the child's throat with a tongue depressor to assess for airway swelling.",
+      "Obtain a throat swab to culture for Group A Streptococcus.",
+      "Keep the child calm and prepare for immediate endotracheal intubation in the operating room.",
+      "Establish intravenous access to administer prescribed broad-spectrum antibiotics."
+    ],
+    "correctAnswer": "Keep the child calm and prepare for immediate endotracheal intubation in the operating room.",
+    "rationale": "The child is exhibiting the classic tripod presentation of acute epiglottitis: drooling (inability to swallow secretions), high fever, inspiratory stridor, and the chin-thrust forward tripod position. This is a life-threatening bacterial infection — typically Haemophilus influenzae type b — causing massive epiglottic swelling. The airway can completely close at any second. The nurse must keep the child as calm as possible (agitation and crying dramatically increase airway resistance and can trigger fatal laryngospasm) and prepare immediately for an emergency secured airway — endotracheal intubation or emergency tracheostomy — performed by experts in a controlled OR setting. Nothing must ever be inserted into the mouth or throat of a child with suspected epiglottitis — no tongue blades, no throat swabs, no examination. The mechanical stimulation can cause immediate, fatal laryngospasm and total airway obstruction. IV access and antibiotics are necessary but secondary — starting an IV causes the child to cry and fight, potentially triggering laryngospasm before the airway is secured. Airway always comes before medications.",
+    "trapBreakdown": "The trap is Option A (inspect the throat with a tongue depressor). Students are trained that assessment comes first — and visualizing the site of the problem seems logical. Epiglottitis is the most important and highest-yield exception to this rule on the NCLEX. Any instrumentation of the airway, including a tongue depressor or throat swab, can trigger immediate, fatal laryngospasm. The only acceptable airway visualization is performed in the OR with anesthesia and intubation equipment immediately available.",
+    "trapTags": [
+      "epiglottitis",
+      "tripod-position",
+      "airway-emergency",
+      "tongue-depressor-contraindicated",
+      "laryngospasm",
+      "pediatric",
+      "assess-first-exception"
+    ]
+  },
+  {
+    "id": 139,
+    "type": "standard",
+    "difficulty": "HARD",
+    "category": "Management of Care",
+    "stem": "A wound care nurse is treating a client with a rare, complex stage 4 pressure injury. The nurse wants to post a photograph of the wound on a private, invite-only Facebook group for wound care professionals to discuss treatment options. The nurse obtains written, signed consent from the client to take the photograph and ensures that no facial features, names, or room numbers are visible in the image. Which statement regarding this action is correct?",
+    "options": [
+      "This action is acceptable because the client provided written consent and the image is de-identified.",
+      "This action is acceptable because the Facebook group is private and strictly for educational purposes among professionals.",
+      "This action is a violation of confidentiality because institutional authorization and secure facility devices are required for clinical photography.",
+      "This action is a violation of confidentiality because pressure injuries are considered unique identifiers under HIPAA."
+    ],
+    "correctAnswer": "This action is a violation of confidentiality because institutional authorization and secure facility devices are required for clinical photography.",
+    "rationale": "Per NCSBN guidelines on social media and HIPAA, nurses must never use personal devices such as a personal smartphone to take photographs of clients or any body part, regardless of patient consent. Clinical photography must be performed using facility-approved, secure, encrypted devices and uploaded directly to the electronic medical record through secure institutional channels. Posting any patient image to a personal social media account — even a closed, invite-only group — is a severe breach of confidentiality and facility policy because the data is transmitted through non-HIPAA-compliant third-party servers. Patient consent does not override federal HIPAA data security law or facility policy regarding secure handling of PHI. No social media platform is truly private — content can be screenshotted and globally distributed within seconds. A pressure injury is not itself a unique HIPAA identifier, but the mechanism — using a personal device and uploading to social media — constitutes the violation regardless of what the image depicts.",
+    "trapBreakdown": "The trap is Option A (patient gave written consent). Students believe that signed patient consent overrides all other rules. A patient cannot legally authorize a nurse to violate federal HIPAA data security regulations that require PHI to be stored only on encrypted, facility-approved devices and systems. Consent authorizes what happens to the patient; it cannot waive federal information security law. The violation is in the transmission method, not the content.",
+    "trapTags": [
+      "HIPAA",
+      "social-media",
+      "clinical-photography",
+      "personal-device",
+      "consent-does-not-override",
+      "NCSBN",
+      "confidentiality"
+    ]
+  },
+  {
+    "id": 140,
+    "type": "highlight",
+    "difficulty": "HARD",
+    "category": "Physiological Adaptation",
+    "stem": "A 22-year-old client is 12 hours postoperative following an open reduction and internal fixation (ORIF) of a right tibia fracture. The client's right leg is immobilized in a fiberglass cast. Highlight the three findings in the nursing assessment that indicate the client is developing a limb-threatening complication.\n\nNursing Note: 'Client is resting in bed with the right leg elevated on two pillows. Client reports the pain in their right leg is a 9/10 and states, The pain medicine you gave me an hour ago didn't help at all. The cast appears intact and dry. Capillary refill in the right toes is 5 seconds. The client states, My foot feels like it has pins and needles in it. The client is able to wiggle their toes upon command. A strong pedal pulse is palpable via Doppler ultrasound.'",
+    "options": [
+      "Client is resting in bed with the right leg elevated on two pillows.",
+      "Client reports the pain in their right leg is a 9/10 and states, 'The pain medicine you gave me an hour ago didn't help at all.'",
+      "The cast appears intact and dry.",
+      "Capillary refill in the right toes is 5 seconds.",
+      "The client states, 'My foot feels like it has pins and needles in it.'",
+      "The client is able to wiggle their toes upon command.",
+      "A strong pedal pulse is palpable via Doppler ultrasound."
+    ],
+    "correctAnswer": "Client reports the pain in their right leg is a 9/10 and states, 'The pain medicine you gave me an hour ago didn't help at all.'., Capillary refill in the right toes is 5 seconds., The client states, 'My foot feels like it has pins and needles in it.'",
+    "correctIndices": [
+      1,
+      3,
+      4
+    ],
+    "rationale": "The client is developing Compartment Syndrome — a surgical emergency where swelling inside the rigid fascial compartment (or cast) cuts off blood flow and causes ischemia of nerves and muscles. The classic early signs are assessed using the 6 Ps framework. Pain out of proportion to the injury that is unrelieved by opioid analgesics is the earliest and most reliable sign of compartment syndrome — ischemic pain is not responsive to narcotics. Capillary refill of 5 seconds indicates severe arterial compromise — normal is less than 3 seconds; 5 seconds confirms significantly impaired peripheral perfusion. Paresthesia described as pins and needles indicates early ischemic nerve compression — nerves are the first structures to suffer from oxygen deprivation in a tight compartment. Leg elevation is a normal postoperative positioning measure and is not a sign of compartment syndrome. An intact, dry cast is a normal expected finding. The ability to wiggle toes indicates motor function is still present — paralysis is a late sign of compartment syndrome. A palpable pedal pulse is a normal finding — pulselessness is a very late, ominous sign of compartment syndrome that indicates the limb is already severely compromised. The nurse must intervene based on the early signs before the pulse disappears.",
+    "trapBreakdown": "The trap is selecting the palpable pedal pulse or the ability to wiggle toes as reassuring normal findings — and missing that the other three findings are an emergency. Students are taught that absent pulses mean vascular compromise. In compartment syndrome, the pulse is often still palpable even while severe ischemia is destroying the muscles and nerves inside the compartment. A pulse does not rule out compartment syndrome. The nurse must act on pain, paresthesia, and capillary refill — not wait for the pulse to disappear.",
+    "trapTags": [
+      "compartment-syndrome",
+      "highlight",
+      "NGN",
+      "6-Ps",
+      "unrelieved-pain",
+      "paresthesia",
+      "capillary-refill",
+      "pulse-present-late-sign",
+      "ORIF"
+    ]
+  },
+  {
+    "id": 141,
+    "type": "standard",
+    "difficulty": "HARD",
+    "category": "Management of Care",
+    "stem": "The nurse is receiving the hand-off report for four clients on a medical-surgical unit. Which client should the nurse assess first?",
+    "options": [
+      "A client who is 24 hours postoperative following a total thyroidectomy and reports a high-pitched, harsh respiratory sound when breathing in.",
+      "A client with a deep vein thrombosis (DVT) receiving a continuous heparin infusion whose platelet count has dropped from 250,000/mm³ to 110,000/mm³ over the last 48 hours.",
+      "A client with asthma who reports chest tightness and has a peak expiratory flow rate (PEFR) reading in the yellow zone.",
+      "A client with chronic heart failure who has a B-type natriuretic peptide (BNP) level of 1,200 pg/mL and 2+ pitting edema."
+    ],
+    "correctAnswer": "A client who is 24 hours postoperative following a total thyroidectomy and reports a high-pitched, harsh respiratory sound when breathing in.",
+    "rationale": "A high-pitched, harsh sound on inspiration is stridor — indicating severe, life-threatening upper airway obstruction. Following thyroidectomy, this is typically caused by laryngeal edema, vocal cord paralysis from recurrent laryngeal nerve damage, or an expanding hematoma compressing the trachea. This is an immediate ABC (Airway) emergency requiring rapid response team activation and an emergency tracheostomy tray at the bedside. A drop in platelets greater than 50% in a client on heparin (250,000 to 110,000 = 56% drop) is Heparin-Induced Thrombocytopenia (HIT) — the heparin must be stopped and the provider notified, but an active airway obstruction always takes priority over a circulation/clotting issue. A PEFR in the yellow zone (50–80% of personal best) indicates caution and requires a rescue inhaler, but is not an immediate red-zone emergency. A BNP of 1,200 pg/mL is severely elevated but represents a chronic, expected finding for this admission and does not supersede an acute airway loss.",
+    "trapBreakdown": "The trap is Option B (HIT with platelet drop). Students recognize the classic greater-than-50% platelet drop as HIT, which is a high-yield NCLEX emergency, and instinctively want to stop the heparin. However, the NCLEX prioritization framework is absolute: Airway beats Circulation every time. Stridor will kill the patient in minutes from total airway obstruction; HIT will take much longer to cause harm. Airway first.",
+    "trapTags": [
+      "priority-setting",
+      "stridor",
+      "thyroidectomy",
+      "HIT",
+      "heparin-induced-thrombocytopenia",
+      "airway-first",
+      "platelet-drop"
+    ]
+  },
+  {
+    "id": 142,
+    "type": "standard",
+    "difficulty": "HARD",
+    "category": "Management of Care",
+    "stem": "A client with a documented history of severe intravenous (IV) heroin substance misuse is admitted with infective endocarditis requiring 6 weeks of intravenous antibiotics. The healthcare provider refuses to order a peripherally inserted central catheter (PICC) line, stating, 'The client will just use the PICC line to shoot up illicit drugs,' and instead orders short peripheral IVs to be rotated every 3 days. Which action by the nurse demonstrates adherence to health equity and patient advocacy standards?",
+    "options": [
+      "Follow the provider's order, as placing a PICC line in a client with active IV substance misuse is a documented contraindication.",
+      "Advocate for the PICC line placement and request a multidisciplinary care conference involving addiction medicine and social work to create a safe discharge plan.",
+      "Privately inform the client that they are being treated differently due to their history of substance misuse and suggest they file a grievance.",
+      "Suggest the provider switch the client to oral antibiotics to avoid the need for any intravenous access."
+    ],
+    "correctAnswer": "Advocate for the PICC line placement and request a multidisciplinary care conference involving addiction medicine and social work to create a safe discharge plan.",
+    "rationale": "Health equity mandates that clients with substance use disorders receive the same standard of medical care as any other client. The standard of care for 6 weeks of IV antibiotics for endocarditis is a central line such as a PICC. Denying a PICC line based on stigma or fear of misuse is a form of medical bias that constitutes unequal care. The nurse must advocate for the equitable standard of care while simultaneously addressing the safety concern through a multidisciplinary approach — addiction medicine consult, social work, tamper-evident dressings, and a supervised administration plan. Active IV substance misuse is not an absolute medical contraindication for a PICC line when life-saving long-term IV therapy is required. While the client has a right to file a grievance, the nurse's primary role is to actively advocate for the correct medical treatment first. Endocarditis requires prolonged IV bactericidal antibiotics — oral antibiotics are insufficient and would result in treatment failure and death.",
+    "trapBreakdown": "The trap is Option A (follow the provider's order). Students may believe that refusing to place a PICC in an IV drug user is a legitimate clinical safety decision and that following the provider's order protects the nurse from liability. The NCLEX tests the nurse's duty to advocate against biased care. Withholding the standard of care based on a patient's social history — not their clinical presentation — is a health equity violation that the nurse is obligated to challenge through appropriate channels.",
+    "trapTags": [
+      "health-equity",
+      "substance-misuse",
+      "PICC-line",
+      "advocacy",
+      "infective-endocarditis",
+      "implicit-bias",
+      "multidisciplinary"
+    ]
+  },
+  {
+    "id": 143,
+    "type": "bowtie",
+    "difficulty": "HARD",
+    "category": "Physiological Adaptation",
+    "stem": "A 58-year-old client with a history of alcoholic cirrhosis and severe ascites is brought to the emergency department by their family. Assessment: The family reports the client has been increasingly confused and lethargic over the last 24 hours. The client reports diffuse, constant abdominal pain. Vital Signs: BP 100/60 mm Hg, HR 112 bpm, RR 22 breaths/min, Temp 101.8°F (38.8°C). Physical Exam: The abdomen is severely distended, tense, and diffusely tender to palpation. Rebound tenderness is present.\n\nComplete the Bow-Tie by selecting the correct Condition, two Actions to Take, and two Parameters to Monitor.",
+    "centerOptions": [
+      "Spontaneous Bacterial Peritonitis (SBP)",
+      "Ruptured Esophageal Varices",
+      "Acute Pancreatitis"
+    ],
+    "actionOptions": [
+      "Prepare the client for a diagnostic paracentesis",
+      "Administer broad-spectrum intravenous antibiotics",
+      "Administer a warm tap water enema",
+      "Prepare for emergent balloon tamponade (Sengstaken-Blakemore tube)"
+    ],
+    "parameterOptions": [
+      "Core body temperature",
+      "Mental status and Glasgow Coma Scale (GCS)",
+      "Hourly blood glucose",
+      "Chest tube drainage"
+    ],
+    "correctCenter": "Spontaneous Bacterial Peritonitis (SBP)",
+    "correctActions": [
+      "Prepare the client for a diagnostic paracentesis",
+      "Administer broad-spectrum intravenous antibiotics"
+    ],
+    "correctParameters": [
+      "Core body temperature",
+      "Mental status and Glasgow Coma Scale (GCS)"
+    ],
+    "rationale": "SBP is a severe, life-threatening infection of the ascitic fluid in clients with cirrhosis. The classic triad is fever, diffuse abdominal pain with rebound tenderness, and worsening hepatic encephalopathy (confusion and lethargy). Ruptured esophageal varices present with massive painless hematemesis — not diffuse abdominal tenderness. Acute pancreatitis presents with epigastric pain radiating to the back in a non-cirrhotic context, not rebound tenderness with massive ascites as the primary trigger. Diagnostic paracentesis is required immediately to obtain ascitic fluid for culture, Gram stain, and absolute neutrophil count — an ANC above 250 cells/mm³ confirms SBP. IV antibiotics (typically cefotaxime or piperacillin-tazobactam) must be started immediately after cultures are drawn — SBP is rapidly fatal without treatment. Core body temperature monitors the effectiveness of antibiotic therapy in resolving the systemic infection. Mental status and GCS monitoring is critical because the infection accelerates hepatic encephalopathy — deteriorating consciousness means the client may lose their airway.",
+    "trapBreakdown": "The trap is selecting balloon tamponade (Sengstaken-Blakemore tube) as an action. Students associate cirrhosis with esophageal varices and see hypotension plus tachycardia and reflexively want to prepare for variceal hemorrhage control. However, the key differentiator is that this client has diffuse abdominal pain, rebound tenderness, fever, and confusion — not hematemesis. Always match interventions to the actual diagnosis, not the underlying chronic disease.",
+    "trapTags": [
+      "SBP",
+      "spontaneous-bacterial-peritonitis",
+      "bowtie",
+      "NGN",
+      "cirrhosis",
+      "paracentesis",
+      "varices-trap",
+      "encephalopathy"
+    ]
+  },
+  {
+    "id": 144,
+    "type": "standard",
+    "difficulty": "HARD",
+    "category": "Reduction of Risk Potential",
+    "stem": "A full-term neonate (born at 40 weeks gestation) is 2 hours old. The mother has a history of poorly controlled gestational diabetes. The nurse observes that the neonate is jittery, lethargic, and has a weak cry. The nurse performs a point-of-care (POC) capillary heel stick, which reveals a blood glucose level of 32 mg/dL (1.8 mmol/L). What is the nurse's first action?",
+    "options": [
+      "Administer an immediate intravenous bolus of 10% Dextrose in Water (D10W).",
+      "Feed the neonate breast milk or infant formula immediately.",
+      "Send a venous blood sample to the laboratory to confirm the POC glucose result.",
+      "Swaddle the neonate tightly and place them under a radiant warmer."
+    ],
+    "correctAnswer": "Feed the neonate breast milk or infant formula immediately.",
+    "rationale": "The neonate is exhibiting symptomatic hypoglycemia (glucose below 40–45 mg/dL), a very common complication for infants of diabetic mothers due to fetal hyperinsulinemia from chronic maternal hyperglycemia. The first-line immediate treatment for a conscious neonate who is able to swallow is enteral feeding with breast milk or infant formula. This provides a sustained, physiological source of glucose without the risks of IV access. IV dextrose (D10W) is reserved for neonates who are severely symptomatic such as seizing or comatose, or who are unable to tolerate oral feedings — it is not the first step for a jittery but conscious infant. While a venous sample may confirm the value, the nurse must treat symptomatic hypoglycemia immediately based on the POC result — delaying treatment to wait for a lab result can cause irreversible hypoglycemic brain damage. Cold stress can worsen hypoglycemia so keeping the infant warm is important, but warming alone does not correct the blood glucose deficit.",
+    "trapBreakdown": "The trap is Option C (confirm the POC result with a venous draw). In adults with extreme unexpected POC readings, confirming before treating is sometimes appropriate. However, in a symptomatic neonate with a highly expected complication from a mother with poorly controlled diabetes, you must treat the hypoglycemia immediately. The clinical picture and the POC result together create the diagnosis — lab confirmation can happen after treatment begins.",
+    "trapTags": [
+      "neonatal-hypoglycemia",
+      "infant-of-diabetic-mother",
+      "point-of-care-testing",
+      "enteral-feeding",
+      "D10W-reserved",
+      "confirm-vs-treat"
+    ]
+  },
+  {
+    "id": 145,
+    "type": "sata",
+    "difficulty": "HARD",
+    "category": "Safety and Infection Prevention and Control",
+    "stem": "A client is admitted to the emergency department with a high fever, a severe cough, and a maculopapular rash that started on the face and spread to the trunk. The healthcare provider suspects active Measles (Rubeola). Which infection control interventions must the nurse implement? Select all that apply.",
+    "options": [
+      "Place the client in a private room with negative-pressure airflow.",
+      "Ensure all staff entering the room wear an N95 respirator mask.",
+      "Instruct the client to wear a standard surgical mask if they must be transported outside the room.",
+      "Keep the door to the client's room open to allow for adequate ventilation.",
+      "Don a sterile gown and sterile gloves before performing a physical assessment."
+    ],
+    "correctAnswer": "Place the client in a private room with negative-pressure airflow., Ensure all staff entering the room wear an N95 respirator mask., Instruct the client to wear a standard surgical mask if they must be transported outside the room.",
+    "rationale": "Measles is one of the most contagious viral illnesses known, transmitted via small airborne droplet nuclei that remain suspended in room air for up to 2 hours after an infected person has left the room. This requires strict Airborne Precautions: a negative-pressure isolation room where air flows inward preventing escape into the hallway, and an N95 respirator (or PAPR) for all staff entering because a standard surgical mask does not filter particles small enough to block measles. When transport out of the negative-pressure room is unavoidable, the client wears a surgical mask to contain their own respiratory secretions and protect others in corridors and procedure areas. The door to a negative-pressure room must be kept tightly closed at all times to maintain the pressure differential — opening the door defeats the purpose of negative pressure isolation and allows airborne particles to escape. Standard clean gloves and a regular isolation gown are appropriate if contact with bodily fluids is anticipated — sterile PPE is never required for routine isolation precautions and would be wasteful and inappropriate.",
+    "trapBreakdown": "The trap is Option D (keep the door open for ventilation). Students may reason that more airflow through an open door dilutes airborne particles and makes the room safer. This is the opposite of how negative-pressure rooms work. The room is engineered to exhaust air directly to the outside or through HEPA filters — the closed door is what maintains the inward airflow that contains pathogens. An open door destroys the entire isolation system.",
+    "trapTags": [
+      "measles",
+      "airborne-precautions",
+      "SATA",
+      "negative-pressure",
+      "N95",
+      "door-closed",
+      "sterile-PPE-wrong"
+    ]
+  },
+  {
+    "id": 146,
+    "type": "matrix",
+    "difficulty": "HARD",
+    "category": "Physiological Adaptation",
+    "stem": "The pediatric clinic nurse is assessing several children with suspected infectious diseases. Match each pediatric infectious disease to its classic hallmark clinical manifestation.",
+    "rows": [
+      "Measles (Rubeola)",
+      "Scarlet Fever",
+      "Pertussis (Whooping Cough)",
+      "Erythema Infectiosum (Fifth Disease)"
+    ],
+    "columns": [
+      "A bright red 'slapped cheek' appearance on the face.",
+      "A 'strawberry tongue' and a fine, red, sandpaper-like rash on the trunk.",
+      "Small white spots with a bluish-white center on the buccal mucosa (Koplik spots).",
+      "Severe, rapid coughing fits followed by a high-pitched inspiratory sound."
+    ],
+    "correctAnswer": {
+      "Measles (Rubeola)": "Small white spots with a bluish-white center on the buccal mucosa (Koplik spots).",
+      "Scarlet Fever": "A 'strawberry tongue' and a fine, red, sandpaper-like rash on the trunk.",
+      "Pertussis (Whooping Cough)": "Severe, rapid coughing fits followed by a high-pitched inspiratory sound.",
+      "Erythema Infectiosum (Fifth Disease)": "A bright red 'slapped cheek' appearance on the face."
+    },
+    "rationale": "Measles (Rubeola) is identified by Koplik spots — small white or bluish-white spots on a red base found on the buccal mucosa (inner cheeks), appearing 2–3 days before the characteristic full-body maculopapular rash. These spots are pathognomonic for measles. Scarlet Fever is caused by Group A Streptococcus and presents with a bright red swollen strawberry tongue and a distinctive fine, red, sandpaper-textured rash that begins on the trunk and spreads outward, sparing the area around the mouth (circumoral pallor). Pertussis (Whooping Cough) is caused by Bordetella pertussis and characterized by paroxysmal coughing fits so severe the child empties their lungs, followed by a forced rapid inhalation producing the classic high-pitched whooping sound. It is also known as the 100-day cough. Erythema Infectiosum (Fifth Disease) is caused by Parvovirus B19 and presents with the distinctive bright red slapped cheek facial rash followed by a lacy, reticular rash on the trunk and extremities. Important: Fifth Disease is dangerous in pregnancy (can cause fetal hydrops) and in immunocompromised clients (aplastic crisis).",
+    "trapBreakdown": "The most common confusion is between measles and Fifth Disease — both involve facial rashes. Measles rash starts on the face and spreads downward but is a maculopapular full-body rash; the pathognomonic early sign is Koplik spots inside the mouth before the rash appears. Fifth Disease has the iconic bright red slapped-cheek appearance specifically on the cheeks without the widespread Koplik spots or systemic severity of measles.",
+    "trapTags": [
+      "pediatric-infections",
+      "matrix",
+      "NGN",
+      "Koplik-spots",
+      "measles",
+      "scarlet-fever",
+      "whooping-cough",
+      "Fifth-disease",
+      "slapped-cheek"
+    ]
+  },
+  {
+    "id": 147,
+    "type": "standard",
+    "difficulty": "HARD",
+    "category": "Management of Care",
+    "stem": "The registered nurse (RN) is working with a licensed practical nurse (LPN) and an unlicensed assistive personnel (UAP) on a medical-surgical unit. Which task is most appropriate for the RN to delegate to the LPN?",
+    "options": [
+      "Administering a prescribed intravenous push (IVP) dose of morphine for severe pain.",
+      "Performing a sterile wet-to-dry dressing change on a client's stage 4 pressure injury.",
+      "Completing the initial admission assessment for a client transferred from the emergency department.",
+      "Feeding a client who was admitted with a severe stroke and has profound dysphagia."
+    ],
+    "correctAnswer": "Performing a sterile wet-to-dry dressing change on a client's stage 4 pressure injury.",
+    "rationale": "Performing complex sterile dressing changes including wound care for pressure injuries is a standard skill in LPN education and falls safely within their scope of practice for stable clients. Administering IV push medications — especially high-alert narcotics such as morphine — requires continuous monitoring of hemodynamic and respiratory status during and after administration, which is strictly within the RN scope of practice in most jurisdictions. The initial admission assessment establishes the clinical baseline for the client's entire hospital stay and requires the advanced clinical judgment and care planning skills of the RN — it cannot be delegated. A client with profound dysphagia is at high risk for aspiration — feeding requires continuous assessment of swallowing safety and airway patency, which must be performed by the RN or a speech-language pathologist, not delegated.",
+    "trapBreakdown": "The trap is Option D (feeding a client). Students know that feeding is typically a basic task delegated to a UAP or LPN. The NCLEX consistently tests this exception: when the client has profound dysphagia after a severe stroke, feeding becomes a high-risk airway-safety procedure requiring nursing assessment. The modifier 'profound dysphagia' transforms a routine task into an RN-only assessment. Always read the clinical modifiers in delegation questions before selecting.",
+    "trapTags": [
+      "delegation",
+      "LPN-scope",
+      "RN-scope",
+      "IV-push-morphine",
+      "dysphagia-feeding",
+      "initial-assessment",
+      "sterile-dressing"
+    ]
+  },
+  {
+    "id": 148,
+    "type": "standard",
+    "difficulty": "HARD",
+    "category": "Management of Care",
+    "stem": "A nurse receives a direct message on their personal social media account from a former client who was discharged from the hospital 6 months ago. The client writes, 'Hi! You were my favorite nurse. I was just prescribed metformin for my diabetes, and I'm having terrible stomach cramps. Should I stop taking it?' Which action by the nurse is the most appropriate and legally sound?",
+    "options": [
+      "Reply to the message and advise the client that gastrointestinal upset is a normal side effect of metformin that usually resolves.",
+      "Ignore the message and immediately block the client's account to maintain professional boundaries.",
+      "Reply to the message stating, 'I cannot provide medical advice over social media. Please contact your healthcare provider or clinic immediately.'",
+      "Take a screenshot of the message and upload it to the client's electronic medical record at the hospital."
+    ],
+    "correctAnswer": "Reply to the message stating, 'I cannot provide medical advice over social media. Please contact your healthcare provider or clinic immediately.'",
+    "rationale": "Providing medical advice over personal social media — even if clinically accurate — establishes an unapproved provider-patient relationship, violates facility policy, and exposes the nurse to significant legal liability including malpractice claims. However, completely ignoring a client who is reaching out with an active medical concern and questions about medication management could be considered negligent abandonment. The most professionally sound and legally defensible action is to set a clear, firm boundary while safely redirecting the client to appropriate official medical channels where they can receive proper evaluation. Giving specific medical advice such as telling the client GI upset is normal and will resolve is a severe violation of professional boundaries and liability laws even if the clinical information is correct — the nurse has no current assessment of the client. Simply blocking without any response leaves a potentially at-risk client without direction and could constitute abandonment. Uploading a personal social media interaction into an official medical record inappropriately mixes personal digital life with the legal medical record.",
+    "trapBreakdown": "The trap is Option A (reply with the accurate clinical information). Students know that GI side effects of metformin are indeed common and usually resolve — so the information itself is correct. The violation is the medium and the relationship, not the content. Providing any medical advice through personal social media creates legal liability regardless of clinical accuracy. The nurse must redirect, not advise.",
+    "trapTags": [
+      "social-media",
+      "professional-boundaries",
+      "medical-advice",
+      "metformin",
+      "redirect-vs-advise",
+      "legal-liability",
+      "NCSBN"
+    ]
+  },
+  {
+    "id": 149,
+    "type": "sata",
+    "difficulty": "HARD",
+    "category": "Health Promotion and Maintenance",
+    "stem": "The nurse is assessing a client who just delivered a healthy newborn vaginally. The nurse recognizes that the client is at high risk for developing a postpartum hemorrhage due to uterine atony. Which factors in the client's history increase this risk? Select all that apply.",
+    "options": [
+      "The client delivered a macrosomic infant weighing 9 lbs, 4 oz (4.2 kg).",
+      "The client had polyhydramnios (excessive amniotic fluid) during the pregnancy.",
+      "The client's labor was augmented with a continuous oxytocin infusion for 18 hours.",
+      "The client is a primigravida (first pregnancy).",
+      "The client had oligohydramnios (decreased amniotic fluid) during the pregnancy."
+    ],
+    "correctAnswer": "The client delivered a macrosomic infant weighing 9 lbs, 4 oz (4.2 kg)., The client had polyhydramnios (excessive amniotic fluid) during the pregnancy., The client's labor was augmented with a continuous oxytocin infusion for 18 hours.",
+    "rationale": "Uterine atony — the failure of the uterus to contract and compress bleeding vessels after delivery — is the leading cause of postpartum hemorrhage. Anything that overstretches or exhausts the uterine muscle significantly increases risk. Macrosomia (infant over 4 kg / 8 lbs 13 oz) severely overstretches the uterine muscle fibers during pregnancy, impairing the muscle's ability to contract down firmly after delivery. Polyhydramnios creates excessive uterine distension from the increased fluid volume — the uterus is stretched beyond its normal capacity, making effective postpartum contraction difficult. Prolonged labor augmented with oxytocin for 18 hours exhausts the uterine muscle — the myometrial cells and oxytocin receptors become desensitized and fatigued, leaving the uterus unable to generate adequate contractile force after delivery. Being a primigravida is not a risk factor for uterine atony — grand multiparity (5 or more deliveries) is a risk because the muscle has been repeatedly stretched over multiple pregnancies. Oligohydramnios means there was less amniotic fluid than normal, so the uterus was not overstretched — this is not a risk factor for atony.",
+    "trapBreakdown": "The trap is Option D (primigravida). Students may reason that a first-time mother's uterus is inexperienced at contracting after delivery, making it a risk. The evidence is the opposite: grand multiparity (not primiparity) is the risk factor because repeated distension over multiple pregnancies progressively weakens the uterine muscle. A primigravida's uterus is actually more likely to contract effectively.",
+    "trapTags": [
+      "postpartum-hemorrhage",
+      "uterine-atony",
+      "SATA",
+      "macrosomia",
+      "polyhydramnios",
+      "oxytocin-fatigue",
+      "primigravida-not-a-risk"
+    ]
+  },
+  {
+    "id": 150,
+    "type": "highlight",
+    "difficulty": "HARD",
+    "category": "Physiological Adaptation",
+    "stem": "A 45-year-old client with a history of a complete spinal cord injury at the T4 level is admitted to the medical unit with a suspected urinary tract infection. Highlight the three findings in the nursing assessment that indicate the client is experiencing a life-threatening neurological emergency.\n\nNursing Note: 'Client is lying in bed and reports feeling anxious. The client states, I have a severe, pounding headache right behind my eyes. The client's indwelling urinary catheter is draining cloudy, foul-smelling urine. Vital signs reveal a blood pressure of 210/115 mm Hg. The heart rate is 48 bpm. The skin on the client's face, neck, and upper chest is profoundly flushed and diaphoretic. The skin on the client's lower extremities is pale and cool to the touch.'",
+    "options": [
+      "Client is lying in bed and reports feeling anxious.",
+      "The client states, 'I have a severe, pounding headache right behind my eyes.'",
+      "The client's indwelling urinary catheter is draining cloudy, foul-smelling urine.",
+      "Vital signs reveal a blood pressure of 210/115 mm Hg.",
+      "The heart rate is 48 bpm.",
+      "The skin on the client's face, neck, and upper chest is profoundly flushed and diaphoretic.",
+      "The skin on the client's lower extremities is pale and cool to the touch."
+    ],
+    "correctAnswer": "The client states, 'I have a severe, pounding headache right behind my eyes.'., Vital signs reveal a blood pressure of 210/115 mm Hg., The skin on the client's face, neck, and upper chest is profoundly flushed and diaphoretic.",
+    "correctIndices": [
+      1,
+      3,
+      5
+    ],
+    "rationale": "The client is experiencing Autonomic Dysreflexia — a life-threatening hypertensive emergency unique to spinal cord injuries at or above T6. It is triggered by a noxious stimulus below the injury level — in this case the UTI and bladder irritation from the catheter. The classic triad of hallmark symptoms is: (1) Severe pounding headache caused by the massive spike in blood pressure threatening cerebral hemorrhage; (2) Extreme hypertension at 210/115 mm Hg that can cause a fatal hemorrhagic stroke if untreated; (3) Profound flushing and diaphoresis above the level of the spinal cord injury caused by parasympathetic vasodilation attempting to compensate for the dangerously elevated blood pressure. Generalized anxiety is a nonspecific finding not diagnostic of autonomic dysreflexia. Cloudy, foul-smelling urine identifies the triggering cause (UTI) but is not itself the emergency sign — it is the underlying noxious stimulus. Bradycardia (HR 48) and pale, cool skin below the injury level are physiological components of the syndrome but are secondary compensatory responses — the three primary recognizable hallmarks the nurse must act on immediately are the headache, extreme hypertension, and upper-body flushing.",
+    "trapBreakdown": "The trap is selecting the cloudy urine as one of the three emergency findings. Students correctly identify the UTI as the cause of the episode, and it is clinically important — it is what the nurse must find and eliminate to stop the dysreflexia. However, the cloudy urine is the trigger, not the emergency itself. The three findings that indicate the life-threatening neurological emergency are the hypertensive crisis signs: the headache, the BP of 210/115, and the above-level flushing. Distinguishing the trigger from the emergency is the key clinical judgment skill this question tests.",
+    "trapTags": [
+      "autonomic-dysreflexia",
+      "spinal-cord-injury",
+      "T4",
+      "highlight",
+      "NGN",
+      "hypertensive-emergency",
+      "flushing",
+      "pounding-headache",
+      "trigger-vs-emergency"
+    ]
   }
 ]
